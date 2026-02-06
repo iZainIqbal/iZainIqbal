@@ -1,16 +1,16 @@
 <div align="center">
 
-# 👋 Hi, I'm Hassan Umar
+# 👋 Hi, I'm Zain Iqbal
 
-### Senior Software Engineer | Full Stack Developer | React Native Expert
+### MVP Developer | Flutter Expert | Full-Stack Engineer
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-hassanumar.dev-blue?style=for-the-badge&logo=google-chrome&logoColor=white)](https://hassanumar-lhe-pk.vercel.app)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hassan-umar-lhe-pk/)
-[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hassanumar.lhe.pk@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/hassanumar-lhe-pk)
-[![Resume](https://img.shields.io/badge/Resume-Download-red?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white)](https://github.com/hassanumar-lhe-pk/hassanumar-lhe-pk/raw/main/Resume_Zain_Iqbal.pdf)
+[![Portfolio](https://img.shields.io/badge/Portfolio-izainiqbal.github.io-blue?style=for-the-badge&logo=google-chrome&logoColor=white)](https://izainiqbal.github.io/my-portfolio)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/zain-iqbal-devs/)
+[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:appdev.zain@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/iZainIqbal)
+[![Resume](https://img.shields.io/badge/Resume-Download-red?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white)](https://github.com/iZainIqbal/my-portfolio/raw/main/Resume_Zain_Iqbal.pdf)
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=667EEA&center=true&vCenter=true&random=false&width=600&lines=Full+Stack+Developer;React+Native+Expert;MERN+Stack+Specialist;5%2B+Years+Experience;50%2B+Projects+Delivered" alt="Typing SVG" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=667EEA&center=true&vCenter=true&random=false&width=600&lines=MVP+Developer;Flutter+Expert;Startup+Focused;Fast+Delivery;Production+Ready" alt="Typing SVG" />
 
 </div>
 
@@ -18,29 +18,39 @@
 
 ## 🚀 About Me
 
-I'm a **passionate Senior Software Engineer** specializing in building exceptional digital experiences. With **5+ years** of professional experience, I transform ideas into elegant, scalable solutions that users love.
+I'm a **passionate MVP Developer** specializing in building exceptional mobile and web applications that help startups validate their ideas fast. With **hands-on experience** building production apps, I transform concepts into working MVPs in **4-8 weeks**.
 
 ```javascript
-const hassan = {
+const zain = {
   location: "Pakistan 🇵🇰",
-  role: "Senior Software Engineer",
-  specialization: ["Full Stack Development", "Mobile Apps", "Web Applications"],
-  currentFocus: "Building scalable React Native & MERN stack applications",
-  availableFor: "Freelance projects, consulting, and collaboration",
+  role: "MVP Developer",
+  specialization: [
+    "Flutter Development",
+    "Mobile Apps",
+    "Web Applications",
+    "Startup MVPs",
+  ],
+  currentFocus: "Building scalable Flutter & React applications for startups",
+  availableFor:
+    "MVP development, freelance projects, and startup consultations",
 
-  code: ["JavaScript", "TypeScript", "Python", "Java"],
+  code: ["Dart", "JavaScript", "Python"],
   technologies: {
-    mobile: ["React Native", "Expo"],
-    frontend: ["React", "Next.js", "Redux", "TailwindCSS"],
-    backend: ["Node.js", "Express", "NestJS"],
-    databases: ["MongoDB", "PostgreSQL", "Firebase", "MySQL"],
-    cloud: ["AWS", "Digital Ocean", "Vercel", "Netlify"],
-    tools: ["Git", "Docker", "Postman", "VS Code"],
+    mobile: ["Flutter", "React Native", "Firebase"],
+    frontend: ["React", "Next.js", "TailwindCSS"],
+    backend: ["Node.js", "Express", "MongoDB"],
+    databases: ["Firebase", "MongoDB", "SQLite"],
+    tools: ["Git", "VS Code", "Figma"],
   },
 
-  architecture: ["Microservices", "RESTful APIs", "GraphQL", "Serverless"],
-  currentlyLearning: "AI/ML Integration & Web3 Technologies",
-  funFact: "I debug with console.log and I'm not ashamed! 😄",
+  delivery: [
+    "4-8 weeks MVP delivery",
+    "Production-ready code",
+    "Full ownership transfer",
+  ],
+  experience: "5+ production apps shipped",
+  funFact:
+    "I turn ideas into apps faster than most people finish their coffee! ☕",
 };
 ```
 
@@ -53,22 +63,22 @@ const hassan = {
     <td align="center" width="25%">
       <img src="https://img.icons8.com/fluency/96/000000/smartphone-tablet.png" width="60"/>
       <br><strong>Mobile Development</strong>
-      <br>Cross-platform iOS & Android apps with React Native
+      <br>Cross-platform Flutter apps with Firebase backend
     </td>
     <td align="center" width="25%">
       <img src="https://img.icons8.com/fluency/96/000000/web.png" width="60"/>
       <br><strong>Web Development</strong>
-      <br>Modern, responsive web applications with React & Next.js
+      <br>Modern React applications with Node.js backend
     </td>
     <td align="center" width="25%">
-      <img src="https://img.icons8.com/fluency/96/000000/server.png" width="60"/>
-      <br><strong>Backend Development</strong>
-      <br>Scalable APIs with Node.js, Express & databases
+      <img src="https://img.icons8.com/fluency/96/000000/rocket.png" width="60"/>
+      <br><strong>MVP Development</strong>
+      <br>Fast-track startup validation with working prototypes
     </td>
     <td align="center" width="25%">
       <img src="https://img.icons8.com/fluency/96/000000/code.png" width="60"/>
       <br><strong>Full Stack Solutions</strong>
-      <br>End-to-end MERN stack application development
+      <br>End-to-end Flutter & MERN stack development
     </td>
   </tr>
 </table>
@@ -79,44 +89,33 @@ const hassan = {
 
 ### Languages
 
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
+### Mobile
+
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
 
 ### Frontend
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
-![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Material-UI](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)
 
 ### Backend
 
 ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white)
-![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
-![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
-
-### Databases
-
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
 
-### Cloud & DevOps
+### Tools & Platforms
 
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Digital Ocean](https://img.shields.io/badge/Digital_Ocean-0080FF?style=for-the-badge&logo=digitalocean&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
+![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
 
 ---
 
@@ -124,14 +123,14 @@ const hassan = {
 
 <div align="center">
 
-| 🎯 Metric                     | 📊 Value           |
-| ----------------------------- | ------------------ |
-| **Years of Experience**       | 5+ Years           |
-| **Projects Completed**        | 50+ Projects       |
-| **Client Satisfaction**       | 100%               |
-| **Technologies Mastered**     | 10+                |
-| **Open Source Contributions** | Active Contributor |
-| **Code Quality**              | Production-Grade   |
+| 🎯 Metric                   | 📊 Value                 |
+| --------------------------- | ------------------------ |
+| **Production Apps Shipped** | 5+ Apps                  |
+| **Average Delivery Time**   | 4-8 Weeks                |
+| **Client Satisfaction**     | 100%                     |
+| **Tech Stack Mastered**     | Flutter, React, Firebase |
+| **Startup Projects**        | Active Contributor       |
+| **Code Quality**            | Production-Ready         |
 
 </div>
 
@@ -142,45 +141,45 @@ const hassan = {
 <table>
   <tr>
     <td width="50%">
-      <h3 align="center">🚀 CoCaptain</h3>
+      <h3 align="center">🤖 AIPEX Fitness App</h3>
       <div align="center">
-        <a href="https://cocaptain.com" target="_blank">
-          <img src="https://img.shields.io/badge/View_Project-667EEA?style=for-the-badge&logo=google-chrome&logoColor=white" alt="View Project"/>
+        <a href="https://github.com/iZainIqbal/chatbot" target="_blank">
+          <img src="https://img.shields.io/badge/View_Project-667EEA?style=for-the-badge&logo=github&logoColor=white" alt="View Project"/>
         </a>
-        <p><strong>React Native, Node.js, MongoDB</strong></p>
-        <p>Full-featured mobile application with real-time features and seamless UX</p>
+        <p><strong>Flutter, Firebase, Dialogflow AI</strong></p>
+        <p>AI-powered fitness coaching app with personalized workout plans and real-time tracking</p>
       </div>
     </td>
     <td width="50%">
-      <h3 align="center">💎 LuxeLocker</h3>
+      <h3 align="center">🚗 Ride-Booking Platform</h3>
       <div align="center">
-        <a href="https://luxelocker.com" target="_blank">
-          <img src="https://img.shields.io/badge/View_Project-667EEA?style=for-the-badge&logo=google-chrome&logoColor=white" alt="View Project"/>
+        <a href="https://www.youtube.com/shorts/XoDwdQPJYMU" target="_blank">
+          <img src="https://img.shields.io/badge/View_Demo-667EEA?style=for-the-badge&logo=youtube&logoColor=white" alt="View Demo"/>
         </a>
-        <p><strong>React, Next.js, Express</strong></p>
-        <p>E-commerce platform with advanced features and modern design</p>
+        <p><strong>Flutter, Firebase, Google Maps</strong></p>
+        <p>Complete ride-booking solution with real-time GPS tracking and driver matching</p>
       </div>
     </td>
   </tr>
   <tr>
     <td width="50%">
-      <h3 align="center">📊 Shift-ERP</h3>
+      <h3 align="center">🛒 E-Commerce Platform</h3>
       <div align="center">
-        <a href="https://shift-erp.com" target="_blank">
-          <img src="https://img.shields.io/badge/View_Project-667EEA?style=for-the-badge&logo=google-chrome&logoColor=white" alt="View Project"/>
+        <a href="https://github.com/iZainIqbal" target="_blank">
+          <img src="https://img.shields.io/badge/View_Project-667EEA?style=for-the-badge&logo=github&logoColor=white" alt="View Project"/>
         </a>
-        <p><strong>MERN Stack, Redux</strong></p>
-        <p>Enterprise resource planning system with comprehensive modules</p>
+        <p><strong>Flutter, Node.js, Stripe</strong></p>
+        <p>Mobile-first shopping app with secure payments and order tracking</p>
       </div>
     </td>
     <td width="50%">
-      <h3 align="center">🎨 NFTBee</h3>
+      <h3 align="center">🩸 Digitalize Blood Bank</h3>
       <div align="center">
-        <a href="https://nftbee.io" target="_blank">
-          <img src="https://img.shields.io/badge/View_Project-667EEA?style=for-the-badge&logo=google-chrome&logoColor=white" alt="View Project"/>
+        <a href="https://www.youtube.com/shorts/XoDwdQPJYMU" target="_blank">
+          <img src="https://img.shields.io/badge/View_Demo-667EEA?style=for-the-badge&logo=youtube&logoColor=white" alt="View Demo"/>
         </a>
-        <p><strong>React, Web3, Blockchain</strong></p>
-        <p>NFT marketplace with wallet integration and smart contracts</p>
+        <p><strong>Flutter, Firebase, Google Maps</strong></p>
+        <p>Real-time blood donation app connecting donors with patients in emergencies</p>
       </div>
     </td>
   </tr>
@@ -199,24 +198,24 @@ const hassan = {
 ```typescript
 interface DeveloperSkills {
   technical: {
-    architecture: "Scalable & Maintainable";
-    codeQuality: "Clean & Well-Documented";
-    testing: "Unit & Integration Tests";
-    performance: "Optimized & Fast";
+    delivery: "Fast MVP development in 4-8 weeks";
+    codeQuality: "Clean, production-ready code";
+    focus: "100% attention on your project";
+    ownership: "Full source code and deployment rights";
   };
 
   soft: {
-    communication: "Clear & Proactive";
-    problemSolving: "Analytical & Creative";
-    teamwork: "Collaborative & Supportive";
-    learning: "Continuous & Adaptive";
+    communication: "Direct, weekly updates";
+    understanding: "Startup constraints and priorities";
+    problemSolving: "Practical solutions for real users";
+    reliability: "On-time delivery, every time";
   };
 
   delivery: {
-    timeline: "On-Time Delivery";
-    quality: "Production-Ready Code";
-    support: "Post-Launch Maintenance";
-    documentation: "Comprehensive Docs";
+    timeline: "4-8 week MVP delivery";
+    quality: "Working, user-tested applications";
+    support: "Post-launch support included";
+    flexibility: "Adapts to changing requirements";
   };
 }
 ```
@@ -225,28 +224,28 @@ interface DeveloperSkills {
 
 ## 🤝 Open Source & Community
 
-I'm passionate about **open-source** and believe in giving back to the community that helped me grow. I actively contribute to projects, share knowledge, and help fellow developers.
+I'm passionate about **helping startups succeed** and believe in building real solutions that users love. I actively contribute to the developer community by sharing knowledge and helping fellow entrepreneurs.
 
-- 🌱 Contributing to open-source projects
-- 📝 Writing technical articles and tutorials
-- 💬 Helping developers on Stack Overflow
-- 🎓 Mentoring junior developers
-- 🔧 Maintaining personal open-source projects
+- 🌱 Contributing to startup success stories
+- 📝 Sharing MVP development insights
+- 💬 Helping developers on tech forums
+- 🎓 Mentoring aspiring app developers
+- 🔧 Building open-source Flutter packages
 
 ---
 
 ## 📫 Let's Connect!
 
-I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Whether you need a **full-time developer**, **freelance help**, or just want to **chat about tech**, feel free to reach out!
+I'm always open to discussing new MVP projects, startup ideas, or opportunities to help you validate your concept. Whether you need a **working prototype**, **full app development**, or just want to **chat about your idea**, feel free to reach out!
 
 <div align="center">
 
-### 💼 Available for Freelance Work
+### 💼 Available for MVP Development
 
-[![Portfolio](https://img.shields.io/badge/🌐_Visit_My_Portfolio-667EEA?style=for-the-badge)](https://hassanumar-lhe-pk.vercel.app)
-[![Email Me](https://img.shields.io/badge/📧_Email_Me-D14836?style=for-the-badge)](mailto:hassanumar.lhe.pk@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/💼_Connect_on_LinkedIn-0077B5?style=for-the-badge)](https://www.linkedin.com/in/hassan-umar-lhe-pk/)
-[![Schedule a Call](https://img.shields.io/badge/📞_Schedule_a_Call-25D366?style=for-the-badge)](https://www.linkedin.com/in/hassan-umar-lhe-pk/)
+[![Portfolio](https://img.shields.io/badge/🌐_Visit_My_Portfolio-667EEA?style=for-the-badge)](https://izainiqbal.github.io/my-portfolio)
+[![Email Me](https://img.shields.io/badge/📧_Email_Me-D14836?style=for-the-badge)](mailto:appdev.zain@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/💼_Connect_on_LinkedIn-0077B5?style=for-the-badge)](https://www.linkedin.com/in/zain-iqbal-devs/)
+[![GitHub](https://img.shields.io/badge/📂_View_My_Work-181717?style=for-the-badge)](https://github.com/iZainIqbal)
 
 </div>
 
@@ -254,35 +253,20 @@ I'm always open to discussing new projects, creative ideas, or opportunities to 
 
 ## 💖 Support My Work
 
-If you like what I do and want to support my open-source work, consider buying me a coffee! ☕
+If you like what I do and want to support my journey in helping startups build amazing products, consider buying me a coffee! ☕
 
 <div align="center">
 
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/hassanumar)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/zainiqbal)
 
 </div>
 
----
-
-## 📊 Productivity Stats
-
-<!-- TODO-IST:START -->
-
-🏆 7,995 tasks
-🌸 Completed 0 tasks today
-✅ Completed 673 tasks so far
-⏳ Longest streak is 10 days
-
-<!-- TODO-IST:END -->
-
----
-
 <div align="center">
 
-### 🌟 "Code is like humor. When you have to explain it, it's bad." - Cory House
+### 🌟 "The best way to predict the future is to build it." - Peter Drucker
 
-![Profile Views](https://komarev.com/ghpvc/?username=hassanumar-lhe-pk&color=667EEA&style=for-the-badge&label=Profile+Views)
+![Profile Views](https://komarev.com/ghpvc/?username=iZainIqbal&color=667EEA&style=for-the-badge&label=Profile+Views)
 
-**Thanks for visiting! Let's build something amazing together! 🚀**
+**Thanks for visiting! Let's build your next big idea together! 🚀**
 
 </div>

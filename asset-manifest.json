@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/iZainIqbal/static/css/main.625d0e92.css",
-    "main.js": "/iZainIqbal/static/js/main.d1a6cc5a.js",
+    "main.css": "/iZainIqbal/static/css/main.e12bc258.css",
+    "main.js": "/iZainIqbal/static/js/main.bc62264c.js",
     "static/js/453.09256e00.chunk.js": "/iZainIqbal/static/js/453.09256e00.chunk.js",
     "index.html": "/iZainIqbal/index.html",
-    "main.625d0e92.css.map": "/iZainIqbal/static/css/main.625d0e92.css.map",
-    "main.d1a6cc5a.js.map": "/iZainIqbal/static/js/main.d1a6cc5a.js.map",
+    "main.e12bc258.css.map": "/iZainIqbal/static/css/main.e12bc258.css.map",
+    "main.bc62264c.js.map": "/iZainIqbal/static/js/main.bc62264c.js.map",
     "453.09256e00.chunk.js.map": "/iZainIqbal/static/js/453.09256e00.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.625d0e92.css",
-    "static/js/main.d1a6cc5a.js"
+    "static/css/main.e12bc258.css",
+    "static/js/main.bc62264c.js"
   ]
 }

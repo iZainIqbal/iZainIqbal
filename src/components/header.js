@@ -6,91 +6,99 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = ["Home", "Services", "Process", "Work", "About", "Contact"];
-
-  const handleNavClick = () => {
-    setIsMobileMenuOpen(false);
-  };
+  const navItems = [
+    { label: "Services", href: "#services" },
+    { label: "Process", href: "#process" },
+    { label: "Work", href: "#projects" },
+    { label: "About", href: "#about" },
+    { label: "Contact", href: "#contact" },
+  ];
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
-        ? "bg-white/95 backdrop-blur-md py-4 shadow-md"
-        : "bg-white/80 backdrop-blur-sm py-6"
-        }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-gray-950/95 backdrop-blur-md py-3 border-b border-gray-800"
+          : "bg-gray-950/80 backdrop-blur-sm py-5"
+      }`}
       role="banner"
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <a
           href="#home"
-          className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent"
+          className="text-xl font-bold text-white"
           aria-label="Zain Iqbal - Home"
         >
           Zain Iqbal
         </a>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8" role="navigation" aria-label="Main navigation">
-          {navItems.map((item) => {
-            const href = item === "Work" ? "#projects" : `#${item.toLowerCase()}`;
-            return (
-              <a
-                key={item}
-                href={href}
-                className="relative text-gray-700 hover:text-purple-600 transition-colors group font-medium"
-                aria-label={`Navigate to ${item} section`}
-              >
-                {item}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-blue-500 group-hover:w-full transition-all duration-300"></span>
-              </a>
-            );
-          })}
+        {/* Desktop nav */}
+        <nav
+          className="hidden md:flex items-center gap-8"
+          role="navigation"
+          aria-label="Main navigation"
+        >
+          {navItems.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              className="text-sm text-gray-400 hover:text-white transition-colors font-medium"
+            >
+              {item.label}
+            </a>
+          ))}
+          <a
+            href="/Zain_Iqbal_CV.pdf"
+            download
+            className="text-sm bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors ml-2"
+          >
+            Download Resume
+          </a>
         </nav>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile toggle */}
         <button
-          className="md:hidden text-gray-700 hover:text-purple-600 transition-colors"
+          className="md:hidden text-gray-400 hover:text-white transition-colors"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle mobile menu"
           aria-expanded={isMobileMenuOpen}
         >
-          {isMobileMenuOpen ? (
-            <X className="w-6 h-6" />
-          ) : (
-            <Menu className="w-6 h-6" />
-          )}
+          {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
-      {/* Mobile Navigation Menu */}
+      {/* Mobile menu */}
       {isMobileMenuOpen && (
         <nav
-          className="md:hidden absolute top-full left-0 w-full bg-white/98 backdrop-blur-md border-t border-gray-200 shadow-lg"
+          className="md:hidden absolute top-full left-0 w-full bg-gray-950 border-t border-gray-800"
           role="navigation"
           aria-label="Mobile navigation"
         >
           <div className="flex flex-col py-4">
-            {navItems.map((item) => {
-              const href = item === "Work" ? "#projects" : `#${item.toLowerCase()}`;
-              return (
-                <a
-                  key={item}
-                  href={href}
-                  onClick={handleNavClick}
-                  className="px-6 py-3 text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-colors font-medium"
-                  aria-label={`Navigate to ${item} section`}
-                >
-                  {item}
-                </a>
-              );
-            })}
+            {navItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="px-6 py-3 text-sm text-gray-400 hover:text-white hover:bg-gray-800 transition-colors font-medium"
+              >
+                {item.label}
+              </a>
+            ))}
+            <div className="px-6 pt-3 pb-2">
+              <a
+                href="/Zain_Iqbal_CV.pdf"
+                download
+                className="block text-center text-sm bg-gray-900 text-white px-4 py-2.5 rounded-lg font-semibold hover:bg-gray-700 transition-colors"
+              >
+                Download Resume
+              </a>
+            </div>
           </div>
         </nav>
       )}

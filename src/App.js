@@ -2,17 +2,19 @@ import React, { useEffect } from "react";
 import "./App.css";
 import Header from "./components/header";
 import Home from "./components/home";
-import About from "./components/about";
-import Contact from "./components/contact";
+import Ticker from "./components/ticker";
 import Services from "./components/services";
-import Footer from "./components/footer";
+import Process from "./components/process";
 import Projects from "./components/projects";
-import Certificates from "./components/certificates";
+import About from "./components/about";
 import Experience from "./components/experience";
+import Certificates from "./components/certificates";
+import Contact from "./components/contact";
+import Footer from "./components/footer";
 
 function App() {
   useEffect(() => {
-    document.title = "Zain Iqbal - Flutter Developer | Full-Stack Engineer";
+    document.title = "Zain Iqbal — Full Stack Engineer · Flutter · React · FastAPI";
   }, []);
 
   return (
@@ -23,10 +25,12 @@ function App() {
       <Header />
       <main>
         <Home />
+        <Ticker />
+        <Services />
+        <Process />
+        <Projects />
         <About />
         <Experience />
-        <Services />
-        <Projects />
         <Certificates />
         <Contact />
       </main>

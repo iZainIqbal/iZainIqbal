@@ -6,26 +6,24 @@ import {
   Phone,
   Github,
   Linkedin,
-  Facebook,
-  Instagram,
   Download,
   CheckCircle,
   XCircle,
   Loader,
+  MapPin,
 } from "lucide-react";
 
 // Contact Component
 const Contact = () => {
   const form = useRef();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const sendEmail = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
 
-    // Validate environment variables
     if (
       !process.env.REACT_APP_EMAILJS_SERVICE_ID ||
       !process.env.REACT_APP_EMAILJS_TEMPLATE_ID ||
@@ -59,18 +57,19 @@ const Contact = () => {
       );
   };
   return (
-    <section id="contact" className="py-20 bg-gray-800">
+    <section id="contact" className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Contact Me</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Get in Touch</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto"></div>
+          <p className="text-gray-400 mt-4">Open to remote roles and relocation opportunities</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-semibold text-white mb-6">
-                Get in Touch
+                Let's Connect
               </h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
@@ -79,7 +78,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-gray-400">Email</p>
-                    <p className="text-white">appdev.zain@gmail.com</p>
+                    <a href="mailto:appdev.zain@gmail.com" className="text-white hover:text-blue-400 transition-colors">
+                      appdev.zain@gmail.com
+                    </a>
                   </div>
                 </div>
 
@@ -89,17 +90,29 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-gray-400">Phone</p>
-                    <p className="text-white">+92 306 6244324</p>
+                    <a href="tel:+923466088504" className="text-white hover:text-blue-400 transition-colors">
+                      +92 346 6088504
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-blue-400" />
+                  </div>
+                  <div>
+                    <p className="text-gray-400">Location</p>
+                    <p className="text-white">Lahore, Pakistan</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div>
-              <h4 className="text-lg font-medium text-white mb-4">Follow Me</h4>
+              <h4 className="text-lg font-medium text-white mb-4">Find Me Online</h4>
               <div className="flex space-x-4">
                 {[
-                  { icon: Github, href: "https://github.com/iZainiqbal", label: "GitHub Profile" },
+                  { icon: Github, href: "https://github.com/iZainIqbal", label: "GitHub Profile" },
                   {
                     icon: Linkedin,
                     href: "https://www.linkedin.com/in/zain-iqbal-devs/",
@@ -120,6 +133,15 @@ const Contact = () => {
               </div>
             </div>
 
+            {/* Languages */}
+            <div className="bg-gray-900/50 p-4 rounded-lg border border-gray-700">
+              <h4 className="text-sm font-medium text-gray-400 mb-2">Languages</h4>
+              <div className="flex flex-wrap gap-3">
+                <span className="text-white text-sm">🇬🇧 English <span className="text-gray-500">· Fluent</span></span>
+                <span className="text-white text-sm">🇵🇰 Urdu & Punjabi <span className="text-gray-500">· Native</span></span>
+              </div>
+            </div>
+
             <button>
               <a
                 href="/Zain_Iqbal_CV.pdf"
@@ -127,14 +149,13 @@ const Contact = () => {
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full font-medium hover:from-purple-600 hover:to-blue-500 transition-all duration-300 hover:scale-105"
               >
                 <Download className="w-5 h-5" />
-                <span>Download CV</span>
+                <span>Download Resume</span>
               </a>
             </button>
           </div>
 
           <div className="bg-gray-900 p-8 rounded-xl">
             <form ref={form} onSubmit={sendEmail} className="space-y-6" aria-label="Contact form">
-              {/* Status Message */}
               {submitStatus && (
                 <div
                   className={`p-4 rounded-lg flex items-center space-x-2 ${

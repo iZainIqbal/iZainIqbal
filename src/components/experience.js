@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Calendar, MapPin, ExternalLink, Code, Users, Zap, Award } from "lucide-react";
+import { Calendar, MapPin, Code, Zap, Award, ExternalLink, GraduationCap } from "lucide-react";
 
 // Experience Component with Case Study Style
 const Experience = () => {
@@ -8,65 +8,68 @@ const Experience = () => {
   const experiences = [
     {
       company: "Metaviz AI",
-      role: "Flutter Developer",
+      role: "Full Stack Engineer",
       period: "Aug 2025 - Present",
-      location: "Remote",
+      location: "Lahore, Pakistan (Remote)",
       type: "Full-time",
-      description: "Developing scalable Flutter applications following clean architecture principles and implementing complex features for production-ready software solutions.",
+      description: "Ship production Flutter apps and React/TypeScript web applications for international clients (Switzerland, Dubai, US) in marketplace, e-commerce, health, and fitness verticals.",
       achievements: [
-        "Developed multiple Flutter apps including Wellness AOE Distributor and Member apps",
-        "Built Ride-booking platform with real-time tracking and intelligent driver matching (30-sec timeout)",
-        "Created AiPEX fitness app with personalized meal/workout plans and AI chatbot",
-        "Developed Snap n shop Ecommerce app with Stripe payment integration",
-        "Built blog app with REST APIs and Google OAuth integration"
+        "Built complete Flutter (100+ screens, 4 roles) + React 19/TypeScript web frontend for a live Swiss marketplace (handman.ch, Google Play)",
+        "Developed FastAPI backend endpoints for payments (Stripe, TWINT, PostFinance), Twilio OTP, and SSE real-time updates",
+        "Deployed services with Docker on Coolify using Redis-backed Celery workers for background jobs",
+        "Integrated Stripe, Firebase Auth, Firestore, Claude API, and WooCommerce REST across multiple live client apps"
       ],
-      technologies: ["Flutter", "Firebase", "Google Maps API", "Stripe", "Provider", "REST APIs", "Google OAuth", "Clean Architecture"],
+      technologies: ["Flutter", "React 19", "TypeScript", "FastAPI", "Node.js", "Docker", "Firebase", "Stripe", "TWINT", "PostgreSQL", "MongoDB", "Redis"],
       metrics: [
         "5+ Production Apps",
-        "Real-time GPS Tracking",
-        "Payment Integration"
+        "3 Countries (CH · AE · US)",
+        "Full Stack Ownership"
       ],
       projects: [
         {
-          name: "AIPEX Fitness App",
-          period: "Sep 2025 - Oct 2025",
-          description: "Personalized workout/meal plans, body metrics tracking, dark/light themes, AI chatbot with conversation history",
-          tech: ["Flutter", "AI Chatbot", "Provider", "Firebase"]
+          name: "Handman: Swiss Craftsmen Marketplace",
+          period: "Mar 2026 - Present",
+          description: "Live Swiss marketplace with 100+ screens, 4 user roles, real-time chat, biometric/passkey login, offline-first storage, 4-language UI (DE/FR/IT/EN), and Stripe/TWINT/PostFinance payments. Built full Flutter + React 19/TypeScript frontend with FastAPI backend.",
+          tech: ["Flutter", "React 19", "TypeScript", "FastAPI", "Docker", "Stripe", "TWINT"],
+          link: "https://handman.ch"
         },
         {
-          name: "Ride-Booking Platform",
-          period: "Sep 2025",
-          description: "Dual-app system with intelligent driver matching (30-sec timeout), real-time GPS tracking, trip history, and earnings dashboard",
-          tech: ["Flutter", "Google Maps", "Real-time Tracking", "Provider"]
+          name: "RawTeen: Grocery Delivery (Dubai)",
+          period: "Jan - Feb 2026",
+          description: "Flutter frontend for a Dubai grocery-delivery app with Stripe checkout, WooCommerce REST catalog, and Google Maps store locator with delivery zones.",
+          tech: ["Flutter", "WooCommerce", "REST APIs", "Stripe", "Google Maps"],
+          link: "https://metavizai.com/case-study/woocommerce-based-grocery-delivery-app-nutrition-focused-e-commerce-for-rawteen-dubai/"
         },
         {
-          name: "E-commerce Platform",
-          period: "Sep 2025",
-          description: "Full e-commerce app with Stripe payments, Google OAuth, shopping cart (Provider), product catalog, and order management",
-          tech: ["Flutter", "Stripe", "Google OAuth", "Provider", "REST APIs"]
+          name: "AI Apex: Fitness and Nutrition Coaching",
+          period: "Sep - Oct 2025",
+          description: "Sole developer (frontend + backend): Flutter client + Node.js/Python APIs; integrated Claude API, Firebase, and Stripe subscriptions.",
+          tech: ["Flutter", "Node.js", "Python", "Claude API", "Firebase", "Stripe"],
+          link: "https://metavizai.com/case-study/ai-apex-personalized-fitness-nutrition-coaching-powered-by-generative-ai/"
         },
         {
-          name: "Wellness APP - AOE",
-          period: "Aug 2025 - Sep 2025",
-          description: "Social blogging with rich text editor, user profiles, content feed, and Google authentication",
-          tech: ["Flutter", "Google Auth", "Rich Text Editor", "Firebase"]
+          name: "AOE Wellness: Wellness Platform",
+          period: "Nov - Dec 2025",
+          description: "End-to-end wellness platform with gamified habit tracking, role-based Member/Distributor dashboards, and REST APIs.",
+          tech: ["Flutter", "Node.js", "Firebase", "REST APIs"],
+          link: "https://metavizai.com/case-study/wellness-accountability-app-a-complete-wellness-platform-by-metaviz-ai/"
         }
       ]
     },
     {
-      company: "Business Incubation Center (BIC), University of Gujrat",
-      role: "Flutter Developer Intern",
-      period: "Nov 2023 – Apr 2024",
+      company: "BIC, University of Gujrat",
+      role: "Flutter Developer: Digitalize Blood Bank",
+      period: "Nov 2023 - Apr 2024",
       location: "Gujrat, Pakistan",
       type: "Internship",
-      description: "Developed a real-time blood donation app serving actual users, implementing secure messaging and real-time notifications.",
+      description: "Built a full iOS and Android blood donation platform with real-time donor matching, Firebase Auth, live push notifications, and Firestore sync.",
       achievements: [
-        "Developed blood donation app with live location matching and Firebase Auth",
-        "Implemented real-time notifications for donation requests",
-        "Built secure in-app messaging using third-party libraries",
-        "Collaborated on code reviews, team meetings, and technical documentation"
+        "Built a full iOS and Android blood donation platform with real-time donor matching and Firebase Auth",
+        "Developed an in-app private chat module supporting text and media sharing between donors and recipients",
+        "Implemented Provider state management for smooth, responsive UX across concurrent real-time updates",
+        "Delivered in an Agile team with code reviews, sprint ceremonies, and technical documentation"
       ],
-      technologies: ["Flutter", "Firebase", "Firestore", "FCM", "Real-time Database"],
+      technologies: ["Flutter", "Firebase", "Firestore", "FCM", "Provider", "Google Maps"],
       metrics: [
         "6-Month Internship",
         "Real-time System",
@@ -76,12 +79,21 @@ const Experience = () => {
         {
           name: "Digitalize Blood Bank",
           period: "Nov 2023 - Apr 2024",
-          description: "Real-time blood donor app with live location matching, Firebase Auth, real-time notifications, and secure in-app messaging",
+          description: "Real-time blood donor app with live location matching, Firebase Auth, real-time notifications, and secure in-app private messaging",
           tech: ["Flutter", "Firebase", "Firestore", "FCM", "Google Maps"]
         }
       ]
     }
   ];
+
+  const education = {
+    degree: "B.Sc. Computer Science",
+    gpa: "GPA: 3.37 / 4.00",
+    institution: "University of Gujrat",
+    period: "Nov 2021 - Aug 2025",
+    location: "Gujrat, Pakistan",
+    courses: "OOP, Data Structures & Algorithms, DBMS, Machine Learning, Deep Learning, AI, Web Development, Statistics"
+  };
 
   return (
     <section id="experience" className="py-20 bg-gray-800">
@@ -90,7 +102,7 @@ const Experience = () => {
           <h2 className="text-4xl font-bold text-white mb-4">Professional Experience</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto"></div>
           <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
-            Real-world projects and professional experience building scalable applications
+            2+ years shipping production apps to App Store & Google Play
           </p>
         </div>
 
@@ -191,8 +203,8 @@ const Experience = () => {
                   {exp.projects && exp.projects.length > 0 && (
                     <div>
                       <h4 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                        <Users className="w-5 h-5 text-blue-400" />
-                        Projects
+                        <Code className="w-5 h-5 text-blue-400" />
+                        Featured Projects
                       </h4>
                       <div className="space-y-4">
                         {exp.projects.map((project, i) => (
@@ -205,7 +217,7 @@ const Experience = () => {
                               <span className="text-xs text-gray-400">{project.period}</span>
                             </div>
                             <p className="text-gray-400 text-sm mb-3">{project.description}</p>
-                            <div className="flex flex-wrap gap-2">
+                            <div className="flex flex-wrap gap-2 mb-2">
                               {project.tech.map((tech, j) => (
                                 <span
                                   key={j}
@@ -215,6 +227,17 @@ const Experience = () => {
                                 </span>
                               ))}
                             </div>
+                            {project.link && (
+                              <a
+                                href={project.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 text-sm transition-colors"
+                              >
+                                <span>View Case Study</span>
+                                <ExternalLink className="w-3 h-3" />
+                              </a>
+                            )}
                           </div>
                         ))}
                       </div>
@@ -225,10 +248,54 @@ const Experience = () => {
             </div>
           ))}
         </div>
+
+        {/* Education Section */}
+        <div className="mt-12">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-white mb-4">Education</h2>
+            <div className="w-16 h-1 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto"></div>
+          </div>
+          <div className="bg-gray-900 rounded-xl p-6 border border-gray-700">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center flex-shrink-0">
+                  <GraduationCap className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white">{education.degree}</h3>
+                  <p className="text-blue-400 font-semibold">{education.gpa}</p>
+                  <p className="text-gray-400">{education.institution}</p>
+                  <div className="flex flex-wrap items-center gap-3 text-gray-500 text-sm mt-1">
+                    <div className="flex items-center gap-1">
+                      <Calendar className="w-3 h-3" />
+                      <span>{education.period}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <MapPin className="w-3 h-3" />
+                      <span>{education.location}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-4 pt-4 border-t border-gray-700">
+              <p className="text-gray-500 text-sm mb-2">Key Courses:</p>
+              <div className="flex flex-wrap gap-2">
+                {education.courses.split(", ").map((course, i) => (
+                  <span
+                    key={i}
+                    className="px-3 py-1 bg-purple-500/10 text-purple-400 text-xs rounded-full border border-purple-500/20"
+                  >
+                    {course}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
 };
 
 export default Experience;
-

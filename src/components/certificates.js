@@ -2,36 +2,43 @@ import React from "react";
 
 // Certificates Component
 const Certificates = () => {
+  // TODO: confirm exact completion years for each
   const certificates = [
-    { 
-      title: "Introduction to Cloud Computing", 
+    {
+      title: "Introduction to Cloud Computing",
       provider: "Coursera – IBM",
-      link: "https://www.coursera.org/learn/introduction-to-cloud"
+      year: "2024",
+      link: "https://www.coursera.org/learn/introduction-to-cloud",
     },
     {
       title: "Python for Data Science, AI and Development",
       provider: "Coursera – IBM",
-      link: "https://www.coursera.org/learn/python-for-applied-data-science-ai"
+      year: "2024",
+      link: "https://www.coursera.org/learn/python-for-applied-data-science-ai",
     },
-    { 
-      title: "Introduction to DevOps", 
+    {
+      title: "Introduction to DevOps",
       provider: "Coursera – IBM",
-      link: "https://www.coursera.org/learn/introduction-to-devops"
+      year: "2024",
+      link: "https://www.coursera.org/learn/introduction-to-devops",
     },
-    { 
-      title: "Agile Development and Scrum", 
+    {
+      title: "Agile Development and Scrum",
       provider: "Coursera – IBM",
-      link: "https://www.coursera.org/learn/agile-development-and-scrum"
+      year: "2024",
+      link: "https://www.coursera.org/learn/agile-development-and-scrum",
     },
     {
       title: "Fundamentals of Unity Android Game Development",
       provider: "Coursera – IBM",
-      link: "https://www.coursera.org/learn/fundamentals-of-unity-android-game-development"
+      year: "2023",
+      link: "https://www.coursera.org/learn/fundamentals-of-unity-android-game-development",
     },
     {
       title: "Effective Problem Solving and Decision-Making",
       provider: "Coursera – IBM",
-      link: "https://www.coursera.org/learn/effective-problem-solving-and-decision-making"
+      year: "2024",
+      link: "https://www.coursera.org/learn/effective-problem-solving-and-decision-making",
     },
   ];
 
@@ -59,7 +66,9 @@ const Certificates = () => {
                   <h3 className="font-semibold text-white mb-2">
                     {cert.title}
                   </h3>
-                  <p className="text-gray-400 text-sm">{cert.provider}</p>
+                  <p className="text-gray-400 text-sm">
+                    {cert.provider} · {cert.year}
+                  </p>
                 </div>
               </div>
             </a>

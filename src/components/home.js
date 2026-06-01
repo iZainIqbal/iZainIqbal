@@ -1,91 +1,86 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { MapPin, Briefcase, Code2, Rocket } from "lucide-react";
 
-// Home Component - MVP Developer Hero Section
+// TODO: replace with your actual Cal.com / Calendly link
+const BOOK_CALL_URL = "https://cal.com/zain-iqbal-dev";
+
 const Home = () => {
+  const stats = [
+    { icon: Rocket, value: "5", label: "Flutter apps shipped in 2025" },
+    { icon: Code2, value: "4", label: "Payment rails (Stripe·Twint·NFC·Pay)" },
+    { icon: Briefcase, value: "2yr", label: "Professional experience" },
+    { icon: MapPin, value: "4", label: "Countries served (CH/US/UAE/PK)" },
+  ];
+
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center bg-gradient-to-br from-white via-gray-50 to-purple-50 relative overflow-hidden"
+      className="min-h-screen flex items-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden pt-28 pb-16"
     >
       {/* Animated Background */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-700"></div>
-        <div className="absolute bottom-20 left-40 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <div className="absolute top-20 left-1/4 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
-        <div className="space-y-8">
-          <div className="space-y-6">
-            {/* Availability Badge */}
-            <div className="inline-flex items-center gap-2 bg-green-100 border border-green-300 text-green-700 px-4 py-2 rounded-full text-sm font-semibold shadow-sm">
-              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-              Available for new projects (Feb 2026)
-            </div>
+      <div className="max-w-4xl mx-auto px-6 relative z-10 text-center flex flex-col items-center gap-10">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight">
+          Zain Iqbal
+        </h1>
 
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight animate-fade-in-up">
-              I Build MVPs That Help Startups{" "}
-              <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
-                Validate Ideas Fast
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
-              Product developer who turns your concept into a working mobile or web app in{" "}
-              <span className="text-purple-600 font-semibold">weeks, not months</span>.
-            </p>
+        <p className="text-2xl sm:text-3xl md:text-4xl font-semibold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent leading-tight">
+          Flutter Developer (iOS &amp; Android) · React Native · Full-Stack Web
+        </p>
+
+        <p className="text-gray-300 text-lg md:text-xl leading-relaxed max-w-2xl">
+          Cross-platform mobile and web apps for international startups.
+          Currently Flutter mobile lead on{" "}
+          <span className="text-blue-400 font-medium">Handman</span> —
+          Switzerland's first AI-native craftsman marketplace — wiring NFC,
+          Twint, Stripe, and passkey auth in Flutter. Shipped 4 more
+          production apps at Metaviz AI since Sep&nbsp;2025.
+        </p>
+
+        <div className="space-y-3">
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3.5 rounded-full font-medium hover:from-purple-600 hover:to-blue-500 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30"
+            >
+              Hire Me
+            </Link>
+            <a
+              href={BOOK_CALL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-emerald-500/50 text-emerald-300 px-8 py-3.5 rounded-full font-medium hover:bg-emerald-500/10 transition-all duration-300"
+            >
+              Book a 20-min Call
+            </a>
           </div>
-
-          <p className="text-gray-600 text-lg leading-relaxed max-w-xl">
-            From Flutter mobile apps to React web platforms, I help startups ship their first version fast.
-            Clean code, real features, and ready for real users.
+          <p className="text-gray-500 text-sm">
+            Typical response time: within 24 hours.
           </p>
-
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="#projects"
-              className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-8 py-4 rounded-full font-semibold hover:from-purple-700 hover:to-blue-600 transition-all duration-300 hover:scale-105 hover:shadow-xl text-center shadow-lg"
-            >
-              View My Work
-            </a>
-            <a
-              href="#contact"
-              className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-full font-semibold hover:bg-purple-50 hover:border-purple-700 transition-all duration-300 text-center shadow-sm"
-            >
-              Let's Talk About Your Idea
-            </a>
-          </div>
-
-          {/* Quick Stats */}
-          <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200">
-            <div>
-              <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">8+</div>
-              <div className="text-sm text-gray-600 font-medium">Production Apps</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">4-8</div>
-              <div className="text-sm text-gray-600 font-medium">Weeks Delivery</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">100%</div>
-              <div className="text-sm text-gray-600 font-medium">Code Ownership</div>
-            </div>
-          </div>
         </div>
 
-        <div className="flex justify-center">
-          <div className="relative">
-            <div className="w-80 h-80 relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full animate-spin-slow opacity-30"></div>
-              <div className="absolute inset-4 bg-gradient-to-r from-purple-300 to-pink-300 rounded-full animate-pulse"></div>
-              <div className="absolute inset-8 w-64 h-64 bg-white rounded-full border-4 border-purple-200 hover:scale-105 transition-transform duration-500 flex items-center justify-center shadow-xl">
-                <img
-                  src="images/heroPic.jpeg"
-                  alt="Zain Iqbal - MVP Developer"
-                  className="w-full h-full object-cover rounded-full"
-                />
+        {/* Metrics strip */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full max-w-2xl pt-4">
+          {stats.map((s, i) => {
+            const Icon = s.icon;
+            return (
+              <div
+                key={i}
+                className="bg-gray-800/60 backdrop-blur-sm p-4 rounded-lg border border-gray-700 text-left"
+              >
+                <Icon className="w-4 h-4 text-blue-400 mb-1.5" />
+                <div className="text-white text-2xl font-bold">{s.value}</div>
+                <div className="text-gray-400 text-[10px] leading-tight">
+                  {s.label}
+                </div>
               </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>

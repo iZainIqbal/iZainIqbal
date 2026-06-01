@@ -6,8 +6,6 @@ import {
   Phone,
   Github,
   Linkedin,
-  Facebook,
-  Instagram,
   Download,
   CheckCircle,
   XCircle,
@@ -62,7 +60,9 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Contact Me</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Hire a Flutter / React Native Developer
+          </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto"></div>
         </div>
 
@@ -70,7 +70,7 @@ const Contact = () => {
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-semibold text-white mb-6">
-                Get in Touch
+                Tell me about your app
               </h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
@@ -90,6 +90,30 @@ const Contact = () => {
                   <div>
                     <p className="text-gray-400">Phone</p>
                     <p className="text-white">+92 306 6244324</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">
+                    <svg
+                      className="w-6 h-6 text-blue-400"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-gray-400">Location</p>
+                    <p className="text-white">
+                      Lahore, Pakistan · Remote worldwide
+                    </p>
                   </div>
                 </div>
               </div>
@@ -120,16 +144,14 @@ const Contact = () => {
               </div>
             </div>
 
-            <button>
-              <a
-                href="/Zain_Iqbal_CV.pdf"
-                download
-                className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full font-medium hover:from-purple-600 hover:to-blue-500 transition-all duration-300 hover:scale-105"
-              >
-                <Download className="w-5 h-5" />
-                <span>Download CV</span>
-              </a>
-            </button>
+            <a
+              href={`${process.env.PUBLIC_URL || ""}/Zain_Iqbal_CV.pdf`}
+              download
+              className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full font-medium hover:from-purple-600 hover:to-blue-500 transition-all duration-300 hover:scale-105"
+            >
+              <Download className="w-5 h-5" />
+              <span>Download CV</span>
+            </a>
           </div>
 
           <div className="bg-gray-900 p-8 rounded-xl">
@@ -186,6 +208,66 @@ const Contact = () => {
                   className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-colors"
                   aria-label="Your Email"
                 />
+              </div>
+
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="project_type" className="sr-only">
+                    Project Type
+                  </label>
+                  <select
+                    id="project_type"
+                    name="project_type"
+                    required
+                    defaultValue=""
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-colors"
+                  >
+                    <option value="" disabled>Project type…</option>
+                    <option value="flutter">Flutter app</option>
+                    <option value="react_native">React Native app</option>
+                    <option value="web">Web app (React / Next.js)</option>
+                    <option value="backend">Backend (FastAPI)</option>
+                    <option value="consulting">Consulting / bugfix</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="budget" className="sr-only">
+                    Budget
+                  </label>
+                  <select
+                    id="budget"
+                    name="budget"
+                    required
+                    defaultValue=""
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-colors"
+                  >
+                    <option value="" disabled>Budget (USD)…</option>
+                    <option value="lt1k">&lt; $1k</option>
+                    <option value="1k_3k">$1k – $3k</option>
+                    <option value="3k_7k">$3k – $7k</option>
+                    <option value="7k_plus">$7k+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="timeline" className="sr-only">
+                  Timeline
+                </label>
+                <select
+                  id="timeline"
+                  name="timeline"
+                  required
+                  defaultValue=""
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-colors"
+                >
+                  <option value="" disabled>Timeline…</option>
+                  <option value="asap">ASAP</option>
+                  <option value="2_4_weeks">2 – 4 weeks</option>
+                  <option value="1_2_months">1 – 2 months</option>
+                  <option value="flexible">Flexible</option>
+                </select>
               </div>
 
               <div>

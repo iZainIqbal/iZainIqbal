@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Calendar, MapPin, ExternalLink, Code, Users, Zap, Award } from "lucide-react";
+import { Calendar, MapPin, Code, Users, Zap, Award } from "lucide-react";
 
 // Experience Component with Case Study Style
 const Experience = () => {
@@ -8,89 +8,137 @@ const Experience = () => {
   const experiences = [
     {
       company: "Metaviz AI",
-      role: "Flutter Developer",
-      period: "Aug 2025 - Present",
+      role: "Flutter Developer | Mobile & GenAI Apps",
+      period: "Aug 2025 – Present",
       location: "Remote",
       type: "Full-time",
-      description: "Developing scalable Flutter applications following clean architecture principles and implementing complex features for production-ready software solutions.",
+      description:
+        "Flutter mobile developer shipping production apps for startups across Switzerland, the US, and the UAE — including Handman, Switzerland's AI-native craftsman OS, plus four published GenAI and e-commerce case studies.",
       achievements: [
-        "Developed multiple Flutter apps including Wellness AOE Distributor and Member apps",
-        "Built Ride-booking platform with real-time tracking and intelligent driver matching (30-sec timeout)",
-        "Created AiPEX fitness app with personalized meal/workout plans and AI chatbot",
-        "Developed Snap n shop Ecommerce app with Stripe payment integration",
-        "Built blog app with REST APIs and Google OAuth integration"
+        "Currently leading Flutter mobile development on Handman — Switzerland's first AI-native craftsman marketplace — integrating NFC tap-to-pay, Twint, and Stripe Connect inside Flutter, plus passkey authentication for a four-language (DE/FR/IT/EN) Swiss product.",
+        "Built the full Flutter frontend for AI Apex (Sep 2025) — a GenAI fitness coaching app with personalized workout/meal plans, body-metrics tracking, dark/light theming, and AI chatbot with conversation history via Provider state.",
+        "Shipped the Flutter mobile frontend and Stripe Checkout integration for Snap n Shop (Oct 2025) — a visual-discovery e-commerce app with Google OAuth, image-based product search, and a polished checkout flow.",
+        "Delivered Rawteen Dubai enhancements (Nov 2025) — integrated Stripe payments and built nutrition-focused product catalog, cart, and order tracking on a WooCommerce backend.",
+        "Built the Wellness Accountability platform end-to-end (Dec 2025) — Flutter mobile frontend with rich-text editor, Google authentication, user profiles, and a content feed, backed by a Strapi backend with Stripe integration.",
+        "Integrated Stripe, Twint, and NFC payments inside Flutter across multiple production apps with clean architecture, reusable widget systems, and Swiss VAT-compliant invoicing.",
       ],
-      technologies: ["Flutter", "Firebase", "Google Maps API", "Stripe", "Provider", "REST APIs", "Google OAuth", "Clean Architecture"],
+      technologies: [
+        "Flutter",
+        "Dart",
+        "Generative AI",
+        "GPT-4",
+        "Firebase",
+        "Strapi",
+        "Stripe Connect",
+        "Twint",
+        "NFC",
+        "Passkeys",
+        "Google OAuth",
+        "Provider",
+        "REST APIs",
+        "WooCommerce",
+        "Clean Architecture",
+      ],
       metrics: [
-        "5+ Production Apps",
-        "Real-time GPS Tracking",
-        "Payment Integration"
+        "5 Production Apps Shipped",
+        "4 Payment Rails Integrated (Stripe · Twint · NFC · Apple/Google Pay)",
+        "4 Languages Supported on Handman (DE/FR/IT/EN)",
       ],
       projects: [
         {
-          name: "AIPEX Fitness App",
-          period: "Sep 2025 - Oct 2025",
-          description: "Personalized workout/meal plans, body metrics tracking, dark/light themes, AI chatbot with conversation history",
-          tech: ["Flutter", "AI Chatbot", "Provider", "Firebase"]
+          name: "Handman — Swiss Craftsman OS",
+          period: "Current · In Production",
+          description:
+            "Leading Flutter mobile development on Switzerland's first AI-native craftsman marketplace. Integrated NFC tap-to-pay, Twint, Stripe Connect inside Flutter, passkey auth, and the GenAI Butler chat surface across four languages.",
+          tech: [
+            "Flutter",
+            "NFC",
+            "Twint",
+            "Stripe Connect",
+            "Passkeys",
+            "i18next",
+            "GPT-4o",
+          ],
         },
         {
-          name: "Ride-Booking Platform",
+          name: "Wellness Accountability — Full-Stack",
+          period: "Dec 2025",
+          description:
+            "Full-stack social wellness app — Flutter mobile frontend with rich-text editor, Google auth, profiles, and content feed, plus Strapi backend with Stripe integration.",
+          tech: ["Flutter", "Strapi", "Stripe", "Google Auth", "Rich Text"],
+        },
+        {
+          name: "Rawteen Dubai — Grocery Delivery",
+          period: "Nov 2025",
+          description:
+            "Built Stripe payment integration and nutrition-focused product catalog, cart, and order tracking on a WooCommerce backend.",
+          tech: ["Flutter", "Stripe", "WooCommerce", "REST APIs"],
+        },
+        {
+          name: "Snap n Shop — Visual Discovery Commerce",
+          period: "Oct 2025",
+          description:
+            "Built the Flutter mobile frontend and Stripe Checkout integration for a visual-discovery e-commerce app with Google OAuth and image-based product search.",
+          tech: ["Flutter", "Stripe", "Google OAuth", "Provider"],
+        },
+        {
+          name: "AI Apex — GenAI Fitness Coach",
           period: "Sep 2025",
-          description: "Dual-app system with intelligent driver matching (30-sec timeout), real-time GPS tracking, trip history, and earnings dashboard",
-          tech: ["Flutter", "Google Maps", "Real-time Tracking", "Provider"]
+          description:
+            "Built the full Flutter frontend — personalized workout/meal plans, body-metrics tracking, dark/light themes, and an AI chatbot with conversation history.",
+          tech: ["Flutter", "Generative AI", "GPT-4", "Provider"],
         },
-        {
-          name: "E-commerce Platform",
-          period: "Sep 2025",
-          description: "Full e-commerce app with Stripe payments, Google OAuth, shopping cart (Provider), product catalog, and order management",
-          tech: ["Flutter", "Stripe", "Google OAuth", "Provider", "REST APIs"]
-        },
-        {
-          name: "Wellness APP - AOE",
-          period: "Aug 2025 - Sep 2025",
-          description: "Social blogging with rich text editor, user profiles, content feed, and Google authentication",
-          tech: ["Flutter", "Google Auth", "Rich Text Editor", "Firebase"]
-        }
-      ]
+      ],
     },
     {
       company: "Business Incubation Center (BIC), University of Gujrat",
-      role: "Flutter Developer Intern",
+      role: "Flutter Developer Intern | Real-Time Apps",
       period: "Nov 2023 – Apr 2024",
       location: "Gujrat, Pakistan",
       type: "Internship",
-      description: "Developed a real-time blood donation app serving actual users, implementing secure messaging and real-time notifications.",
+      description:
+        "Developed a real-time blood donation app serving live users, implementing secure messaging and push notifications during a 6-month production internship.",
       achievements: [
-        "Developed blood donation app with live location matching and Firebase Auth",
-        "Implemented real-time notifications for donation requests",
-        "Built secure in-app messaging using third-party libraries",
-        "Collaborated on code reviews, team meetings, and technical documentation"
+        "Developed a real-time blood donor app serving live users by implementing live location-based donor matching with Firebase Auth, Firestore, and FCM push notifications.",
+        "Implemented secure in-app messaging using third-party SDKs, enabling private donor-requester chat with end-to-end delivery tracking.",
+        "Collaborated with a multi-person engineering team through code reviews, sprint planning, and technical documentation across a 6-month production internship.",
+        "Reduced donor-match latency by integrating real-time Firestore listeners and FCM, replacing manual phone-based coordination.",
       ],
-      technologies: ["Flutter", "Firebase", "Firestore", "FCM", "Real-time Database"],
+      technologies: [
+        "Flutter",
+        "Firebase",
+        "Firestore",
+        "FCM",
+        "Real-time Database",
+      ],
       metrics: [
-        "6-Month Internship",
-        "Real-time System",
-        "Production App"
+        "6-Month Production Internship",
+        "Real-time Donor Matching",
+        "Live App Users",
       ],
       projects: [
         {
           name: "Digitalize Blood Bank",
-          period: "Nov 2023 - Apr 2024",
-          description: "Real-time blood donor app with live location matching, Firebase Auth, real-time notifications, and secure in-app messaging",
-          tech: ["Flutter", "Firebase", "Firestore", "FCM", "Google Maps"]
-        }
-      ]
-    }
+          period: "Nov 2023 – Apr 2024",
+          description:
+            "Real-time blood donor app with live location matching, Firebase Auth, real-time notifications, and secure in-app messaging.",
+          tech: ["Flutter", "Firebase", "Firestore", "FCM", "Google Maps"],
+        },
+      ],
+    },
   ];
 
   return (
     <section id="experience" className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Professional Experience</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Professional Experience
+          </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto"></div>
           <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
-            Real-world projects and professional experience building scalable applications
+            Outcome-driven engineering across mobile, web, and GenAI — shipping
+            real apps for startups in CH, US, UAE, and PK.
           </p>
         </div>
 
@@ -105,14 +153,22 @@ const Experience = () => {
               }`}
             >
               {/* Header */}
-              <div
-                className="p-6 cursor-pointer"
-                onClick={() => setActiveExperience(activeExperience === index ? -1 : index)}
+              <button
+                type="button"
+                className="w-full text-left p-6 cursor-pointer"
+                onClick={() =>
+                  setActiveExperience(activeExperience === index ? -1 : index)
+                }
+                aria-expanded={activeExperience === index}
+                aria-controls={`experience-panel-${index}`}
+                id={`experience-trigger-${index}`}
               >
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                   <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <h3 className="text-2xl font-bold text-white">{exp.role}</h3>
+                    <div className="flex flex-wrap items-center gap-3 mb-2">
+                      <h3 className="text-2xl font-bold text-white">
+                        {exp.role}
+                      </h3>
                       {index === 0 && (
                         <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium">
                           Current
@@ -122,7 +178,9 @@ const Experience = () => {
                     <div className="flex flex-wrap items-center gap-4 text-gray-400 text-sm mb-3">
                       <div className="flex items-center gap-1">
                         <Code className="w-4 h-4" />
-                        <span className="font-semibold text-blue-400">{exp.company}</span>
+                        <span className="font-semibold text-blue-400">
+                          {exp.company}
+                        </span>
                       </div>
                       <div className="flex items-center gap-1">
                         <Calendar className="w-4 h-4" />
@@ -136,11 +194,16 @@ const Experience = () => {
                     <p className="text-gray-300">{exp.description}</p>
                   </div>
                 </div>
-              </div>
+              </button>
 
               {/* Expanded Content */}
               {activeExperience === index && (
-                <div className="border-t border-gray-700 p-6 space-y-6 animate-fade-in">
+                <div
+                  id={`experience-panel-${index}`}
+                  role="region"
+                  aria-labelledby={`experience-trigger-${index}`}
+                  className="border-t border-gray-700 p-6 space-y-6"
+                >
                   {/* Metrics */}
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {exp.metrics.map((metric, i) => (
@@ -150,7 +213,9 @@ const Experience = () => {
                       >
                         <div className="flex items-center gap-2 text-blue-400 mb-1">
                           <Zap className="w-4 h-4" />
-                          <span className="font-semibold text-sm">{metric}</span>
+                          <span className="font-semibold text-sm">
+                            {metric}
+                          </span>
                         </div>
                       </div>
                     ))}
@@ -164,7 +229,10 @@ const Experience = () => {
                     </h4>
                     <ul className="space-y-2">
                       {exp.achievements.map((achievement, i) => (
-                        <li key={i} className="flex items-start gap-3 text-gray-300">
+                        <li
+                          key={i}
+                          className="flex items-start gap-3 text-gray-300"
+                        >
                           <span className="text-blue-400 mt-1">▸</span>
                           <span>{achievement}</span>
                         </li>
@@ -174,7 +242,9 @@ const Experience = () => {
 
                   {/* Technologies */}
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-4">Technologies Used</h4>
+                    <h4 className="text-lg font-semibold text-white mb-4">
+                      Technologies Used
+                    </h4>
                     <div className="flex flex-wrap gap-2">
                       {exp.technologies.map((tech, i) => (
                         <span
@@ -201,10 +271,16 @@ const Experience = () => {
                             className="bg-gray-800/50 p-4 rounded-lg border border-gray-700"
                           >
                             <div className="flex items-start justify-between mb-2">
-                              <h5 className="font-semibold text-white">{project.name}</h5>
-                              <span className="text-xs text-gray-400">{project.period}</span>
+                              <h5 className="font-semibold text-white">
+                                {project.name}
+                              </h5>
+                              <span className="text-xs text-gray-400">
+                                {project.period}
+                              </span>
                             </div>
-                            <p className="text-gray-400 text-sm mb-3">{project.description}</p>
+                            <p className="text-gray-400 text-sm mb-3">
+                              {project.description}
+                            </p>
                             <div className="flex flex-wrap gap-2">
                               {project.tech.map((tech, j) => (
                                 <span
@@ -231,4 +307,3 @@ const Experience = () => {
 };
 
 export default Experience;
-

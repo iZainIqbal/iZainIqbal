@@ -1,89 +1,90 @@
-import React from "react";
-import { Zap, MessagesSquare, FileCode, DollarSign } from "lucide-react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { ChevronRight, ArrowRight } from "lucide-react";
 
-// About Component - Why Work With Me
-const About = () => {
-  const benefits = [
-    {
-      icon: Zap,
-      title: "Quick Delivery",
-      description: "Most MVPs are ready in 4-8 weeks. I focus on shipping working products fast.",
-      color: "blue",
-    },
-    {
-      icon: MessagesSquare,
-      title: "Clear Communication",
-      description: "Weekly updates, direct access to me, and no technical jargon unless you want it.",
-      color: "purple",
-    },
-    {
-      icon: FileCode,
-      title: "You Own Everything",
-      description: "Full source code, documentation, and deployment credentials. Everything I build is yours.",
-      color: "pink",
-    },
-    {
-      icon: DollarSign,
-      title: "Startup-Friendly",
-      description: "I understand limited budgets and tight timelines. I help you prioritize features that matter most.",
-      color: "green",
-    },
-  ];
+// About Component
+const About = ({ compact = false }) => {
+  const publicUrl = process.env.PUBLIC_URL || "";
+  const [activeTab, setActiveTab] = useState("Skills");
 
-  const techStack = {
-    mobile: ["Flutter", "React Native", "Expo", "Firebase"],
-    web: ["React", "Next.js", "TailwindCSS", "Material-UI"],
-    backend: ["Node.js", "Express", "MongoDB", "PostgreSQL", "Firebase"],
-    integrations: ["Stripe", "Google Maps", "Dialogflow", "OAuth", "Twilio", "SendGrid"],
-  };
-
-  const colorClasses = {
-    blue: "from-blue-500 to-blue-600",
-    purple: "from-purple-500 to-purple-600",
-    pink: "from-pink-500 to-pink-600",
-    green: "from-green-500 to-green-600",
+  const tabs = {
+    Skills: [
+      {
+        name: "Flutter & Dart",
+        desc: "Cross-platform mobile apps with clean architecture, Provider/Riverpod, Firebase, REST APIs",
+      },
+      {
+        name: "React & Node.js",
+        desc: "Full-stack web apps with JWT/OAuth, MongoDB, Tailwind, and SSR-ready setups",
+      },
+      {
+        name: "Generative AI",
+        desc: "GPT-4 chatbots, RAG over user data, structured output, Dialogflow conversational flows",
+      },
+      {
+        name: "Payments in Flutter",
+        desc: "Stripe Connect, Twint (Swiss wallet), NFC tap-to-pay, Apple/Google Pay, Swiss VAT-compliant invoicing",
+      },
+      {
+        name: "Auth & Security",
+        desc: "Passkeys (passwordless), Google OAuth, Firebase Auth, secure messaging",
+      },
+      {
+        name: "Backend & Data",
+        desc: "Strapi, Firebase/Firestore, MongoDB, FCM push, REST APIs, real-time listeners",
+      },
+      {
+        name: "Unity (C#)",
+        desc: "Mobile game development — powerups, shop systems, scoring, UI",
+      },
+    ],
+    Experience: [
+      {
+        name: "Flutter Developer — Metaviz AI",
+        desc: "Aug 2025 – Present · Shipping 5+ production apps including Handman, Snap n Shop, AI Apex, Wellness Accountability, and Rawteen",
+      },
+      {
+        name: "Flutter Developer Intern — BIC, University of Gujrat",
+        desc: "Nov 2023 – Apr 2024 · Built real-time blood donor app with Firebase Auth, FCM, secure messaging",
+      },
+      {
+        name: "Freelance & Independent Projects",
+        desc: "Dialogflow AI chatbot, Play Store QR Scanner (100+ downloads), Unity 'Chrono Chase' endless runner",
+      },
+    ],
+    Education: [
+      {
+        name: "BS Computer Science — University of Gujrat",
+        desc: "2021 – 2025 · CGPA 3.37 / 4.00",
+      },
+      {
+        name: "Intermediate (Pre-Engineering)",
+        desc: "Completed 2019 with focus on Pre-Engineering",
+      },
+      {
+        name: "Matriculation (Science)",
+        desc: "Secured 978 / 1100 in science group",
+      },
+    ],
   };
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Why Work With Me</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto"></div>
-        </div>
-
-        {/* Benefits Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              className="bg-gray-900 p-6 rounded-xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300 hover:scale-105"
-            >
-              <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${colorClasses[benefit.color]} flex items-center justify-center mb-4`}>
-                <benefit.icon className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">
-                {benefit.title}
-              </h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                {benefit.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        {/* About Me Section */}
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl"></div>
-            <div className="relative w-full h-96 bg-gray-900 rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-500 flex items-center justify-center">
-              <div className="w-80 h-80 relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full animate-spin-slow opacity-20"></div>
+            <div className="relative w-full h-96 bg-gray-800 rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-500 flex items-center justify-center">
+              <div className="w-64 h-64 sm:w-80 sm:h-80 relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full opacity-20"></div>
                 <div className="absolute inset-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-pulse"></div>
-                <div className="absolute inset-8 w-64 h-64 bg-gray-700 rounded-full border-4 border-white/10 hover:scale-105 transition-transform duration-500 flex items-center justify-center">
+                <div className="absolute inset-8 bg-gray-700 rounded-full border-4 border-white/10 hover:scale-105 transition-transform duration-500 flex items-center justify-center overflow-hidden">
                   <img
-                    src="images/min.jpeg"
-                    alt="Zain Iqbal - MVP Developer"
+                    src={`${publicUrl}/images/profilepicture.webp`}
+                    alt="Zain Iqbal portrait"
+                    width="256"
+                    height="256"
+                    loading="lazy"
                     className="w-full h-full object-cover rounded-full"
                   />
                 </div>
@@ -91,111 +92,91 @@ const About = () => {
             </div>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-8">
             <div>
-              <h3 className="text-3xl font-bold text-white mb-4">
-                Hi, I'm Zain Iqbal
-              </h3>
-              <p className="text-gray-300 leading-relaxed mb-4">
-                I'm a <span className="text-blue-400 font-semibold">Full-Stack Software Developer</span> specializing in building production-ready mobile and web applications with Flutter, React Native, and the MERN stack. I transform ideas into scalable digital products across healthcare, logistics, e-commerce, and social impact sectors.
-              </p>
-              <p className="text-gray-400 leading-relaxed mb-4">
-                My experience includes developing <span className="text-purple-400">AI-powered fitness apps</span> with Dialogflow integration, <span className="text-purple-400">ride-booking platforms</span> with real-time GPS tracking serving 1,000+ test rides, <span className="text-purple-400">digital blood donation networks</span> connecting donors with patients, and <span className="text-purple-400">e-commerce solutions</span> with Stripe payment processing.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                I focus on <span className="text-blue-400 font-semibold">full-stack architecture, RESTful API design, database management</span>, and delivering MVPs in 4-8 weeks. No bloat, no endless meetings—just solid applications with production-ready code, comprehensive documentation, and real features that users love.
-              </p>
+              <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
+              <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></div>
             </div>
 
-            {/* Key Achievements */}
-            <div className="bg-gray-900/50 border-l-4 border-blue-500 p-6 rounded-r-lg">
-              <p className="text-gray-300 mb-3">
-                <span className="text-blue-400 font-semibold">Key Achievements:</span>
-              </p>
-              <ul className="text-gray-400 space-y-2 text-sm">
-                <li>✅ 8+ production applications deployed across multiple industries</li>
-                <li>✅ 10,000+ active users impacted through developed applications</li>
-                <li>✅ 15+ third-party integrations (Stripe, Google Maps, Dialogflow, etc.)</li>
-                <li>✅ 100% client satisfaction with on-time delivery</li>
-              </ul>
-            </div>
+            <p className="text-gray-300 leading-relaxed">
+              <span className="text-white font-medium">
+                5 Flutter apps shipped from Sep 2025 to now
+              </span>{" "}
+              — currently leading mobile development on{" "}
+              <span className="text-blue-400">Handman</span> (Switzerland's
+              AI-native craftsman marketplace) with NFC, Twint, Stripe, and
+              passkey auth integrated in Flutter. Earlier: AI Apex (Sep), Snap
+              n Shop (Oct), Rawteen (Nov), Wellness full-stack (Dec).
+            </p>
 
-            {/* Industries Served */}
-            <div>
-              <p className="text-gray-400 text-sm mb-2">Industries Served:</p>
-              <p className="text-gray-300">
-                Healthcare · Logistics & Transportation · E-commerce · Social Impact
+            {!compact && (
+              <p className="text-gray-400 leading-relaxed">
+                I'm a Flutter and full-stack developer based in Pakistan,
+                building cross-platform mobile and web products for startups in
+                Switzerland, US, UAE, and beyond. Computer Science graduate from
+                University of Gujrat (CGPA 3.37) with 10+ IBM Coursera
+                certifications across Cloud, DevOps, Python, and Unity. Earlier I
+                served as a Junior Developer at Digitalize Blood Bank during a
+                6-month internship.
               </p>
-            </div>
-          </div>
-        </div>
+            )}
 
-        {/* Tech Stack */}
-        <div className="bg-gray-900 p-8 rounded-xl border border-gray-700">
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">
-            Tech Stack
-          </h3>
-          <div className="grid md:grid-cols-4 gap-6">
-            <div>
-              <h4 className="text-blue-400 font-semibold mb-3 text-sm uppercase tracking-wide">
-                Mobile
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                {techStack.mobile.map((tech, i) => (
-                  <span
-                    key={i}
-                    className="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full"
-                  >
-                    {tech}
-                  </span>
+            {compact ? (
+              <Link
+                to="/about"
+                className="inline-flex items-center gap-2 border border-blue-500/50 text-blue-400 px-6 py-3 rounded-full font-medium hover:bg-blue-500/10 transition-all duration-300"
+              >
+                <span>Read full bio</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            ) : (
+            <div className="space-y-4">
+              <div
+                className="flex space-x-6 border-b border-gray-700"
+                role="tablist"
+                aria-label="About tabs"
+              >
+                {Object.keys(tabs).map((tab) => {
+                  const isActive = activeTab === tab;
+                  return (
+                    <button
+                      key={tab}
+                      type="button"
+                      role="tab"
+                      aria-selected={isActive}
+                      aria-controls={`about-panel-${tab}`}
+                      id={`about-tab-${tab}`}
+                      onClick={() => setActiveTab(tab)}
+                      className={`pb-3 px-1 font-medium transition-all duration-300 ${
+                        isActive
+                          ? "text-blue-400 border-b-2 border-blue-400"
+                          : "text-gray-400 hover:text-white"
+                      }`}
+                    >
+                      {tab}
+                    </button>
+                  );
+                })}
+              </div>
+
+              <div
+                id={`about-panel-${activeTab}`}
+                role="tabpanel"
+                aria-labelledby={`about-tab-${activeTab}`}
+                className="space-y-4"
+              >
+                {tabs[activeTab].map((item, index) => (
+                  <div key={index} className="flex items-start space-x-3">
+                    <ChevronRight className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-blue-400 font-medium">{item.name}</h4>
+                      <p className="text-gray-400 text-sm">{item.desc}</p>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
-            <div>
-              <h4 className="text-purple-400 font-semibold mb-3 text-sm uppercase tracking-wide">
-                Web
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                {techStack.web.map((tech, i) => (
-                  <span
-                    key={i}
-                    className="px-3 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h4 className="text-pink-400 font-semibold mb-3 text-sm uppercase tracking-wide">
-                Backend
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                {techStack.backend.map((tech, i) => (
-                  <span
-                    key={i}
-                    className="px-3 py-1 bg-pink-500/20 text-pink-400 text-xs rounded-full"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h4 className="text-green-400 font-semibold mb-3 text-sm uppercase tracking-wide">
-                Integrations
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                {techStack.integrations.map((tech, i) => (
-                  <span
-                    key={i}
-                    className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
+            )}
           </div>
         </div>
       </div>

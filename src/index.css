@@ -2,14 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Smooth scrolling for anchor links */
-html {
-  scroll-behavior: smooth;
+/* Smooth scrolling — respect prefers-reduced-motion */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 /* Scroll offset for fixed header */
 :target {
   scroll-margin-top: 80px;
+}
+
+/* Global focus-visible baseline (WCAG 2.2 AA) */
+:where(a, button, input, textarea, select):focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 3px;
 }
 
 body {

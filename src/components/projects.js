@@ -19,9 +19,12 @@ const featuredProjects = [
     accent: "from-blue-500 to-purple-600",
     internal: true,
     screens: [
-      `${HANDMAN}/butler_car_lockout.webp`,
-      `${HANDMAN}/pro_assistant_quotes.webp`,
-      `${HANDMAN}/reviews.webp`,
+      `${HANDMAN}/handman_jobs.webp`,
+      `${HANDMAN}/handman_quotes.webp`,
+      `${HANDMAN}/handman_invoice.webp`,
+      `${HANDMAN}/handman_butler_car_lockout.webp`,
+      `${HANDMAN}/handman_pro_assistant_quotes.webp`,
+      `${HANDMAN}/handman_reviews.webp`,
     ],
   },
   {
@@ -246,7 +249,7 @@ const FeaturedProject = ({ project, index }) => {
 
         {/* Screens column */}
         <div className="lg:col-span-7 -mx-6 lg:mx-0 overflow-hidden">
-          <div className="flex gap-4 overflow-x-auto pb-4 px-6 lg:px-0 snap-x snap-mandatory scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
+          <div className="flex gap-4 overflow-x-auto pb-4 px-6 lg:px-0 snap-x snap-mandatory scrollbar-hide">
             {project.screens.length > 0 ? (
               project.screens.map((src, i) => (
                 <div key={i} className="snap-start">

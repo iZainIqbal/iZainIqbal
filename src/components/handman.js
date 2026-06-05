@@ -59,17 +59,17 @@ const Handman = () => {
 
   const promoCards = [
     {
-      src: `${publicUrl}/images/handman/butler_car_lockout.webp`,
+      src: `${publicUrl}/images/handman/handman_butler_car_lockout.webp`,
       caption: "AI Butler — Job Detail",
       desc: "Context-rich job details with location, media, and AI guidance in one surface.",
     },
     {
-      src: `${publicUrl}/images/handman/pro_assistant_quotes.webp`,
+      src: `${publicUrl}/images/handman/handman_pro_assistant_quotes.webp`,
       caption: "Pro Assistant — Quotes",
       desc: "Recent quotes with one-tap open, follow-up actions, and faster turnaround.",
     },
     {
-      src: `${publicUrl}/images/handman/reviews.webp`,
+      src: `${publicUrl}/images/handman/handman_reviews.webp`,
       caption: "Reviews & Trust Score",
       desc: "Reputation signals that make the marketplace feel safe and predictable.",
     },
@@ -77,15 +77,15 @@ const Handman = () => {
 
   const screenshots = [
     {
-      src: `${publicUrl}/images/handman/butler_car_lockout.webp`,
+      src: `${publicUrl}/images/handman/handman_butler_car_lockout.webp`,
       caption: "AI Butler — Job Detail",
     },
     {
-      src: `${publicUrl}/images/handman/pro_assistant_quotes.webp`,
+      src: `${publicUrl}/images/handman/handman_pro_assistant_quotes.webp`,
       caption: "Pro Assistant — Quotes",
     },
     {
-      src: `${publicUrl}/images/handman/reviews.webp`,
+      src: `${publicUrl}/images/handman/handman_reviews.webp`,
       caption: "Reviews & Trust Score",
     },
   ];
@@ -245,7 +245,7 @@ const Handman = () => {
             Real screens from the Handman mobile app — AI Butler, Pro
             Assistant, and the Reviews / Trust Score surface.
           </p>
-          <div className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory justify-center md:justify-center">
+          <div className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory justify-center md:justify-center scrollbar-hide">
             {screenshots.map((s, i) => (
               <div key={i} className="snap-start flex-shrink-0 w-[200px] md:w-[220px]">
                 <div className="relative aspect-[9/19] bg-gray-900 rounded-[2rem] border-[6px] border-gray-800 shadow-2xl overflow-hidden">

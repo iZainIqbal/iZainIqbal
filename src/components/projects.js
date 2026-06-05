@@ -14,10 +14,15 @@ const featuredProjects = [
     period: "Current · In Production",
     description:
       "Lead Flutter mobile developer on Switzerland's first AI-native craftsman marketplace. Built NFC tap-to-pay, integrated Twint and Stripe Connect inside Flutter, shipped passkey authentication, and wired the GenAI Butler across four languages (DE/FR/IT/EN).",
-    link: "/handman",
+    links: [
+      { label: "See Case Study", url: "/handman", internal: true },
+      {
+        label: "Google Play",
+        url: "https://play.google.com/store/apps/details?id=ch.handyman.app",
+      },
+    ],
     tech: ["Flutter", "NFC", "Twint", "Stripe", "Passkeys", "GPT-4o"],
     accent: "from-blue-500 to-purple-600",
-    internal: true,
     screens: [
       `${HANDMAN}/handman_jobs.webp`,
       `${HANDMAN}/handman_quotes.webp`,
@@ -58,7 +63,14 @@ const featuredProjects = [
     period: "Nov 2025",
     description:
       "Built Stripe payment integration and shipped enhancements to a nutrition-focused grocery delivery app on a WooCommerce backend — product catalog, cart, order tracking, and a clean Dubai-market consumer experience.",
-    link: "https://metavizai.com/case-study/woocommerce-based-grocery-delivery-app-nutrition-focused-e-commerce-for-rawteen-dubai/",
+    links: [
+      { label: "Visit Website", url: "https://rawteen.com/" },
+      { label: "Instagram", url: "https://www.instagram.com/raw.teen/" },
+      {
+        label: "Case Study",
+        url: "https://metavizai.com/case-study/woocommerce-based-grocery-delivery-app-nutrition-focused-e-commerce-for-rawteen-dubai/",
+      },
+    ],
     tech: ["Flutter", "Stripe", "WooCommerce", "REST APIs"],
     accent: "from-lime-500 to-green-600",
     // rawteen_notification.webp is actually an AI Apex screen (hydration/workout/calorie) — replace with a real Rawteen notification export
@@ -226,25 +238,40 @@ const FeaturedProject = ({ project, index }) => {
             ))}
           </div>
 
-          {project.internal ? (
-            <Link
-              to={project.link}
-              className={`inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r ${project.accent} text-white rounded-full font-medium hover:scale-105 transition-transform duration-300 shadow-lg`}
-            >
-              <span>See Case Study</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          ) : (
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r ${project.accent} text-white rounded-full font-medium hover:scale-105 transition-transform duration-300 shadow-lg`}
-            >
-              <span>View Case Study</span>
-              <ArrowRight className="w-4 h-4" />
-            </a>
-          )}
+          <div className="flex flex-wrap gap-3">
+            {(
+              project.links || [
+                {
+                  label: project.internal ? "See Case Study" : "View Case Study",
+                  url: project.link,
+                  internal: project.internal,
+                },
+              ]
+            ).map((l, i) => {
+              const primary = i === 0;
+              const cls = primary
+                ? `inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r ${project.accent} text-white rounded-full font-medium hover:scale-105 transition-transform duration-300 shadow-lg`
+                : "inline-flex items-center gap-2 px-5 py-2.5 border border-gray-700 text-gray-300 rounded-full font-medium hover:border-blue-500/60 hover:text-white transition-colors duration-300";
+              const Icon = primary ? ArrowRight : ExternalLink;
+              return l.internal ? (
+                <Link key={i} to={l.url} className={cls}>
+                  <span>{l.label}</span>
+                  <Icon className="w-4 h-4" />
+                </Link>
+              ) : (
+                <a
+                  key={i}
+                  href={l.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cls}
+                >
+                  <span>{l.label}</span>
+                  <Icon className="w-4 h-4" />
+                </a>
+              );
+            })}
+          </div>
         </div>
 
         {/* Screens column */}

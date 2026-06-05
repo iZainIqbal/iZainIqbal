@@ -4,7 +4,7 @@ A modern, responsive portfolio website showcasing my work as a Flutter Developer
 
 ## 🚀 Live Demo
 
-Visit the live portfolio: [https://izainiqbal.github.io/my-portfolio](https://izainiqbal.github.io/my-portfolio)
+Visit the live portfolio: **[https://izainiqbal.github.io/iZainIqbal/](https://izainiqbal.github.io/iZainIqbal/)**
 
 ## ✨ Features
 
@@ -13,7 +13,7 @@ Visit the live portfolio: [https://izainiqbal.github.io/my-portfolio](https://iz
 - **Smooth Scrolling**: Enhanced navigation with smooth scroll behavior
 - **Mobile Navigation**: Hamburger menu for mobile devices
 - **Contact Form**: Integrated EmailJS contact form with validation and status feedback
-- **Project Showcase**: Interactive project cards with links to live demos and repositories
+- **Project Showcase**: Interactive project cards with links to live demos and case studies
 - **Certifications**: Display of professional certifications with verification links
 - **Accessibility**: Built with accessibility in mind (ARIA labels, keyboard navigation, skip links)
 - **SEO Optimized**: Comprehensive meta tags, Open Graph, and Twitter Card support
@@ -21,19 +21,35 @@ Visit the live portfolio: [https://izainiqbal.github.io/my-portfolio](https://iz
 ## 🛠️ Tech Stack
 
 - **Frontend Framework**: React 18.2.0
+- **Routing**: React Router DOM 7
 - **Styling**: Tailwind CSS 3.4.1
 - **Icons**: Lucide React
 - **Email Service**: EmailJS
 - **Build Tool**: Create React App
-- **Deployment**: GitHub Pages
+- **Deployment**: GitHub Pages (`gh-pages`)
+
+## 💼 Featured Projects
+
+| Project | Stack | Link |
+|---|---|---|
+| **Handman** — Swiss craftsmen marketplace (live, 100+ screens, 4 roles) | Flutter · React 19 · TypeScript · FastAPI · Docker · Stripe/TWINT | [handman.ch](https://handman.ch) |
+| **Rawteen** — Nutrition grocery delivery (Dubai) | Flutter · WooCommerce · REST | [Case study](https://metavizai.com/case-study/woocommerce-based-grocery-delivery-app-nutrition-focused-e-commerce-for-rawteen-dubai/) |
+| **AI Apex** — AI fitness & nutrition coaching | Flutter · Generative AI · Firebase | [Case study](https://metavizai.com/case-study/ai-apex-personalized-fitness-nutrition-coaching-powered-by-generative-ai/) |
+| **Snap & Shop** — Visual-search commerce | Flutter · Visual AI · Stripe | [Case study](https://metavizai.com/case-study/snap-and-shop-transforming-mobile-commerce-through-visual-discovery/) |
+| **Wellness Accountability** — Habit & goal tracking | Flutter · Firebase · Real-time | [Case study](https://metavizai.com/case-study/wellness-accountability-app-a-complete-wellness-platform-by-metaviz-ai/) |
+| **Digitalize Blood Bank** — Real-time donor matching | Flutter · Firebase · FCM | [Code](https://github.com/iZainIqbal/digitalize-blood-bank) · [Demo](https://www.youtube.com/shorts/XoDwdQPJYMU) |
+| **QR Scanner** — 100+ Play Store downloads | Flutter · Android API | [Post](https://www.linkedin.com/posts/netsflow_appdevelopment-flutterdev-netsflow-activity-7243544883993464832-XlSh) |
+| **Chrono Chase** — Time-travel runner game | Unity · C# | [Post](https://www.linkedin.com/posts/ali-shan-4469a521a_unity-gamedev-3d-activity-7321482456098848771-M-jd) |
+
+> Project data lives in [`src/components/projects.js`](src/components/projects.js).
 
 ## 📦 Installation
 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/iZainIqbal/my-portfolio.git
-cd my-portfolio
+git clone https://github.com/iZainIqbal/iZainIqbal.git
+cd iZainIqbal
 ```
 
 2. Install dependencies:
@@ -61,12 +77,13 @@ The app will open at [http://localhost:3000](http://localhost:3000)
 
 ## 🚀 Deployment
 
-The portfolio is deployed using GitHub Pages. To deploy:
+The portfolio is deployed to GitHub Pages. To deploy:
 
 ```bash
-npm run build
 npm run deploy
 ```
+
+> ⚠️ The `homepage` field in `package.json` **must** match the repository's case-sensitive Pages path (`https://izainiqbal.github.io/iZainIqbal`). A lowercase value (`/izainiqbal`) builds asset paths that 404 on the live site.
 
 ## 📱 Sections
 

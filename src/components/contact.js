@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import {
   Mail,
   Phone,
@@ -20,6 +20,15 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    // Honeypot: bots fill every field; humans never see this one.
+    // Pretend success so bots don't retry, and send nothing.
+    if (form.current.elements.company_website?.value) {
+      setSubmitStatus("success");
+      form.current.reset();
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus(null);
 
@@ -40,7 +49,7 @@ const Contact = () => {
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
         process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         form.current,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        { publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY }
       )
       .then(
         (result) => {
@@ -156,6 +165,15 @@ const Contact = () => {
 
           <div className="bg-gray-900 p-8 rounded-xl">
             <form ref={form} onSubmit={sendEmail} className="space-y-6" aria-label="Contact form">
+              {/* Honeypot field — hidden from humans, catches naive bots */}
+              <input
+                type="text"
+                name="company_website"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                className="hidden"
+              />
               {/* Status Message */}
               {submitStatus && (
                 <div

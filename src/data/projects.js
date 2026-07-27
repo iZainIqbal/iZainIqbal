@@ -44,7 +44,6 @@ export const featuredProjects = [
     ],
     tech: ["Flutter", "Strapi", "Stripe", "Google Auth", "Rich Text"],
     accent: "from-amber-500 to-orange-600",
-    // wellness_login.webp is broken/unreadable — re-export and add back
     screens: [
       `${SCREENS}/wellness_splash_logo.webp`,
       `${SCREENS}/wellness_splash.webp`,
@@ -101,9 +100,16 @@ export const featuredProjects = [
     ],
     tech: ["Flutter", "Stripe", "Google OAuth", "Provider"],
     accent: "from-pink-500 to-rose-600",
-    // No screenshots exported yet — the screens strip is simply not rendered
-    // until real exports land in public/images/screens/.
-    screens: [],
+    screens: [
+      `${SCREENS}/snapnshop_logo.webp`,
+      `${SCREENS}/snapnshop_home.webp`,
+      `${SCREENS}/snapnshop_search_filter.webp`,
+      `${SCREENS}/snapnshop_product_scan.webp`,
+      `${SCREENS}/snapnshop_product_2.webp`,
+      `${SCREENS}/snapnshop_scan_and_earn.webp`,
+      `${SCREENS}/snapnshop_shopping_cart.webp`,
+      `${SCREENS}/snapnshop_profile.webp`,
+    ],
   },
   {
     title: "AI Apex",

@@ -75,20 +75,8 @@ const Handman = () => {
     },
   ];
 
-  const screenshots = [
-    {
-      src: `${publicUrl}/images/handman/handman_butler_car_lockout.webp`,
-      caption: "AI Butler — Job Detail",
-    },
-    {
-      src: `${publicUrl}/images/handman/handman_pro_assistant_quotes.webp`,
-      caption: "Pro Assistant — Quotes",
-    },
-    {
-      src: `${publicUrl}/images/handman/handman_reviews.webp`,
-      caption: "Reviews & Trust Score",
-    },
-  ];
+  // Same three screens as the promo cards, framed as phone shots
+  const screenshots = promoCards.map(({ src, caption }) => ({ src, caption }));
 
   const aboutProject = [
     "Handman is Switzerland's first AI-native operating system for craftsmen — replacing the three software packages every Swiss tradesperson uses today (quoting & invoicing, scheduling, CRM) and folding them into the country's largest AI-powered craftsman marketplace.",

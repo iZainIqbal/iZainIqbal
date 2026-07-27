@@ -1,117 +1,56 @@
-# Zain Iqbal - Portfolio Website
+# Hi, I'm Zain 👋
 
-A modern, responsive portfolio website showcasing my work as a Flutter Developer, Full-Stack Engineer, and Unity Game Developer.
+### Flutter Developer · Full-Stack Engineer · GenAI Builder
 
-## 🚀 Live Demo
+I ship production software — cross-platform apps, AI-powered products, and full-stack
+systems. In 2025 I shipped **5+ production apps**, including **Handman**, Switzerland's
+first AI-native craftsman marketplace.
 
-Visit the live portfolio: **[https://izainiqbal.github.io/iZainIqbal/](https://izainiqbal.github.io/iZainIqbal/)**
+> *Then: trying to code. Now: trying to understand the code.*
 
-## ✨ Features
-
-- **Responsive Design**: Fully responsive layout that works seamlessly on desktop, tablet, and mobile devices
-- **Modern UI/UX**: Clean, professional design with smooth animations and transitions
-- **Smooth Scrolling**: Enhanced navigation with smooth scroll behavior
-- **Mobile Navigation**: Hamburger menu for mobile devices
-- **Contact Form**: Integrated EmailJS contact form with validation and status feedback
-- **Project Showcase**: Interactive project cards with links to live demos and case studies
-- **Certifications**: Display of professional certifications with verification links
-- **Accessibility**: Built with accessibility in mind (ARIA labels, keyboard navigation, skip links)
-- **SEO Optimized**: Comprehensive meta tags, Open Graph, and Twitter Card support
-
-## 🛠️ Tech Stack
-
-- **Frontend Framework**: React 18.2.0
-- **Routing**: React Router DOM 7
-- **Styling**: Tailwind CSS 3.4.1
-- **Icons**: Lucide React
-- **Email Service**: EmailJS
-- **Build Tool**: Create React App
-- **Deployment**: GitHub Pages (`gh-pages`)
-
-## 💼 Featured Projects
-
-| Project | Stack | Link |
-|---|---|---|
-| **Handman** — Swiss craftsmen marketplace (live, 100+ screens, 4 roles) | Flutter · React 19 · TypeScript · FastAPI · Docker · Stripe/TWINT | [handman.ch](https://handman.ch) |
-| **Rawteen** — Nutrition grocery delivery (Dubai) | Flutter · WooCommerce · REST | [Case study](https://metavizai.com/case-study/woocommerce-based-grocery-delivery-app-nutrition-focused-e-commerce-for-rawteen-dubai/) |
-| **AI Apex** — AI fitness & nutrition coaching | Flutter · Generative AI · Firebase | [Case study](https://metavizai.com/case-study/ai-apex-personalized-fitness-nutrition-coaching-powered-by-generative-ai/) |
-| **Snap & Shop** — Visual-search commerce | Flutter · Visual AI · Stripe | [Case study](https://metavizai.com/case-study/snap-and-shop-transforming-mobile-commerce-through-visual-discovery/) |
-| **Wellness Accountability** — Habit & goal tracking | Flutter · Firebase · Real-time | [Case study](https://metavizai.com/case-study/wellness-accountability-app-a-complete-wellness-platform-by-metaviz-ai/) |
-| **Digitalize Blood Bank** — Real-time donor matching | Flutter · Firebase · FCM | [Code](https://github.com/iZainIqbal/digitalize-blood-bank) · [Demo](https://www.youtube.com/shorts/XoDwdQPJYMU) |
-| **QR Scanner** — 100+ Play Store downloads | Flutter · Android API | [Post](https://www.linkedin.com/posts/netsflow_appdevelopment-flutterdev-netsflow-activity-7243544883993464832-XlSh) |
-| **Chrono Chase** — Time-travel runner game | Unity · C# | [Post](https://www.linkedin.com/posts/ali-shan-4469a521a_unity-gamedev-3d-activity-7321482456098848771-M-jd) |
-
-> Project data lives in [`src/components/projects.js`](src/components/projects.js).
-
-## 📦 Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/iZainIqbal/iZainIqbal.git
-cd iZainIqbal
-```
-
-2. Install dependencies:
-
-```bash
-npm install
-```
-
-3. Set up environment variables:
-   Create a `.env` file in the root directory and add your EmailJS credentials:
-
-```env
-REACT_APP_EMAILJS_SERVICE_ID=your_service_id
-REACT_APP_EMAILJS_TEMPLATE_ID=your_template_id
-REACT_APP_EMAILJS_PUBLIC_KEY=your_public_key
-```
-
-4. Start the development server:
-
-```bash
-npm start
-```
-
-The app will open at [http://localhost:3000](http://localhost:3000)
-
-## 🚀 Deployment
-
-The portfolio is deployed to GitHub Pages. To deploy:
-
-```bash
-npm run deploy
-```
-
-> ⚠️ The `homepage` field in `package.json` **must** match the repository's case-sensitive Pages path (`https://izainiqbal.github.io/iZainIqbal`). A lowercase value (`/izainiqbal`) builds asset paths that 404 on the live site.
-
-## 📱 Sections
-
-- **Home**: Hero section with animated typing effect
-- **About**: Skills, experience, and education
-- **Services**: Services offered
-- **Projects**: Portfolio of projects with descriptions and links
-- **Certificates**: Professional certifications
-- **Contact**: Contact form and social media links
-
-## 🎨 Customization
-
-- Update personal information in component files
-- Replace images in `/public/images/`
-- Modify colors and styling in Tailwind config
-- Update project data in `src/components/projects.js`
-- Customize certificates in `src/components/certificates.js`
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 📧 Contact
-
-- **Email**: appdev.zain@gmail.com
-- **LinkedIn**: [zain-iqbal-devs](https://www.linkedin.com/in/zain-iqbal-devs/)
-- **GitHub**: [iZainIqbal](https://github.com/iZainIqbal)
+🔗 **[Portfolio](https://izainiqbal.github.io/iZainIqbal/)** · **[LinkedIn](https://www.linkedin.com/in/zain-iqbal-devs/)** · **appdev.zain@gmail.com**
 
 ---
 
-Made with ❤️ and lots of coffee ☕
+## 🚀 Featured Work
+
+Most of this is production / client work, so the code isn't public — links go to the live
+product or a case study.
+
+| Project | What it is | Stack | Link |
+|---|---|---|---|
+| **Handman** | Swiss craftsmen marketplace — live, 100+ screens, 4 user roles | Flutter · React · TypeScript · FastAPI · Docker · Stripe/TWINT | [handman.ch](https://handman.ch) |
+| **AI Apex** | AI fitness & nutrition coaching | Flutter · Generative AI · Firebase | [Case study](https://metavizai.com/case-study/ai-apex-personalized-fitness-nutrition-coaching-powered-by-generative-ai/) |
+| **Snap & Shop** | Visual-search commerce | Flutter · Visual AI · Stripe | [Case study](https://metavizai.com/case-study/snap-and-shop-transforming-mobile-commerce-through-visual-discovery/) |
+| **Rawteen** | Nutrition grocery delivery (Dubai) | Flutter · WooCommerce · REST | [Case study](https://metavizai.com/case-study/woocommerce-based-grocery-delivery-app-nutrition-focused-e-commerce-for-rawteen-dubai/) |
+| **Digitalize Blood Bank** | Real-time donor matching | Flutter · Firebase · FCM | [Code](https://github.com/iZainIqbal/digitalize-blood-bank) · [Demo](https://www.youtube.com/shorts/XoDwdQPJYMU) |
+| **QR Scanner** | 100+ Play Store downloads | Flutter · Android API | [Post](https://www.linkedin.com/posts/netsflow_appdevelopment-flutterdev-netsflow-activity-7243544883993464832-XlSh) |
+
+---
+
+## 🛠️ Tech Stack
+
+**Mobile** &nbsp;·&nbsp; Flutter · Dart · Unity (C#)
+**Frontend** &nbsp;·&nbsp; React · TypeScript · Tailwind CSS
+**Backend** &nbsp;·&nbsp; FastAPI · Node.js · Firebase · PostgreSQL
+**AI / Infra** &nbsp;·&nbsp; GPT-4 / OpenAI · Generative AI · Docker · Stripe
+
+---
+
+## 📊 GitHub Activity
+
+<!-- These render from github-readme-stats. Nothing to install; GitHub fetches them live. -->
+
+[![Zain's GitHub stats](https://github-readme-stats.vercel.app/api?username=iZainIqbal&show_icons=true&hide_border=true)](https://github.com/iZainIqbal)
+[![Top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=iZainIqbal&layout=compact&hide_border=true)](https://github.com/iZainIqbal)
+
+---
+
+## 📫 Get in touch
+
+- 💼 **LinkedIn** — [zain-iqbal-devs](https://www.linkedin.com/in/zain-iqbal-devs/)
+- 🌐 **Portfolio** — [izainiqbal.github.io/iZainIqbal](https://izainiqbal.github.io/iZainIqbal/)
+- 📧 **Email** — appdev.zain@gmail.com
+
+<sub>This repo also hosts my portfolio website. Build & deploy notes live in
+[DEVELOPMENT.md](DEVELOPMENT.md).</sub>

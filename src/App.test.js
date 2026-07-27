@@ -1,16 +1,20 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-test("renders the home hero with name and role", () => {
+// Route components are lazy-loaded, so queries await the resolved chunks.
+
+test("renders the home hero with name and role", async () => {
   render(<App />);
   expect(
-    screen.getByRole("heading", { level: 1, name: /zain iqbal/i })
+    await screen.findByRole("heading", { level: 1, name: /zain iqbal/i })
   ).toBeInTheDocument();
 });
 
-test("renders the main navigation with all routes", () => {
+test("renders the main navigation with all routes", async () => {
   render(<App />);
-  const nav = screen.getByRole("navigation", { name: /main navigation/i });
+  const nav = await screen.findByRole("navigation", {
+    name: /main navigation/i,
+  });
   for (const label of [
     "Home",
     "Services",
@@ -25,9 +29,9 @@ test("renders the main navigation with all routes", () => {
   expect(nav).toBeInTheDocument();
 });
 
-test("renders a skip-to-content link targeting main", () => {
+test("renders a skip-to-content link targeting main", async () => {
   render(<App />);
-  const skip = screen.getByText(/skip to main content/i);
+  const skip = await screen.findByText(/skip to main content/i);
   expect(skip).toHaveAttribute("href", expect.stringContaining("#main"));
   expect(screen.getByRole("main")).toHaveAttribute("id", "main");
 });

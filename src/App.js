@@ -1,21 +1,19 @@
-import React, { useEffect } from "react";
-import {
-  HashRouter,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
-import "./App.css";
+import React, { Suspense, lazy, useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/header";
 import Home from "./components/home";
-import About from "./components/about";
-import Contact from "./components/contact";
-import Services from "./components/services";
 import Footer from "./components/footer";
-import Projects from "./components/projects";
-import Certificates from "./components/certificates";
-import Experience from "./components/experience";
-import Handman from "./components/handman";
+import RouteMeta from "./components/routeMeta";
+import NotFound from "./components/notFound";
+
+// Route-level code splitting — each page loads as its own chunk.
+const About = lazy(() => import("./components/about"));
+const Contact = lazy(() => import("./components/contact"));
+const Services = lazy(() => import("./components/services"));
+const Projects = lazy(() => import("./components/projects"));
+const Certificates = lazy(() => import("./components/certificates"));
+const Experience = lazy(() => import("./components/experience"));
+const Handman = lazy(() => import("./components/handman"));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -38,6 +36,18 @@ function Layout({ children }) {
   );
 }
 
+function PageFallback() {
+  return (
+    <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+      <div
+        className="w-10 h-10 border-4 border-gray-700 border-t-blue-400 rounded-full animate-spin"
+        role="status"
+        aria-label="Loading page"
+      />
+    </div>
+  );
+}
+
 function HomePage() {
   return (
     <>
@@ -51,22 +61,25 @@ function HomePage() {
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <RouteMeta />
       <ScrollToTop />
       <Layout>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/handman" element={<Handman />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/certificates" element={<Certificates />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<HomePage />} />
-        </Routes>
+        <Suspense fallback={<PageFallback />}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/handman" element={<Handman />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/certificates" element={<Certificates />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </Layout>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

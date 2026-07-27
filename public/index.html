@@ -66,6 +66,58 @@
 
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <script type="text/javascript">
+      // GitHub Pages SPA fallback, part 2 (see public/404.html):
+      // restore the path that 404.html encoded into the query string.
+      (function (l) {
+        if (l.search[1] === "/") {
+          var decoded = l.search
+            .slice(1)
+            .split("&")
+            .map(function (s) {
+              return s.replace(/~and~/g, "&");
+            })
+            .join("?");
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      })(window.location);
+    </script>
+
+    <!-- Structured data for search engines -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Zain Iqbal",
+        "url": "https://izainiqbal.github.io/iZainIqbal/",
+        "jobTitle": "Flutter Developer & Full-Stack Engineer",
+        "email": "mailto:appdev.zain@gmail.com",
+        "worksFor": { "@type": "Organization", "name": "Metaviz AI" },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lahore",
+          "addressCountry": "PK"
+        },
+        "sameAs": [
+          "https://github.com/iZainIqbal",
+          "https://www.linkedin.com/in/zain-iqbal-devs/"
+        ],
+        "knowsAbout": [
+          "Flutter",
+          "Dart",
+          "React",
+          "TypeScript",
+          "FastAPI",
+          "Generative AI",
+          "Stripe"
+        ]
+      }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

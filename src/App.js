@@ -59,9 +59,18 @@ function HomePage() {
   );
 }
 
+// On GitHub Pages the app lives under /iZainIqbal; the CRA dev server serves
+// at "/" while still setting PUBLIC_URL, so only use the basename when the
+// current URL actually starts with it.
+const publicUrl = process.env.PUBLIC_URL || "";
+const basename =
+  publicUrl && window.location.pathname.startsWith(publicUrl)
+    ? publicUrl
+    : "/";
+
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename={basename}>
       <RouteMeta />
       <ScrollToTop />
       <Layout>

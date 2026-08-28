@@ -48,12 +48,14 @@ function PageFallback() {
   );
 }
 
+// Proof before pitch: featured work directly under the hero converts
+// better than leading with the service menu.
 function HomePage() {
   return (
     <>
       <Home />
-      <Services limit={3} showSeeAll />
       <Projects limit={3} hideOlder showSeeAll />
+      <Services limit={3} showSeeAll />
       <About compact />
     </>
   );

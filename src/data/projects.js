@@ -3,15 +3,24 @@ const SCREENS = `${publicUrl}/images/screens`;
 const HANDMAN = `${publicUrl}/images/handman`;
 const IMG = `${publicUrl}/images`;
 
-// Every project uses the same shape: links is always an array,
-// the first entry renders as the primary CTA.
+// Every featured project uses the same shape: `role` is the one-line
+// engagement summary, `highlights` are the scannable proof bullets, and
+// `links` is always an array whose first entry renders as the primary CTA.
+// `categories` drives the filter chips on the Projects page — keys must
+// match FILTERS there. `flagship: true` marks the lead case study.
 export const featuredProjects = [
   {
     title: "Handman",
-    tagline: "Swiss craftsman OS · NFC + Twint + Stripe in Flutter",
+    tagline: "Switzerland's first AI-native craftsman marketplace",
     period: "Current · In Production",
-    description:
-      "Lead Flutter mobile developer on Switzerland's first AI-native craftsman marketplace. Built NFC tap-to-pay, integrated Twint and Stripe Connect inside Flutter, shipped passkey authentication, and wired the GenAI Butler across four languages (DE/FR/IT/EN).",
+    role: "Lead Flutter mobile developer",
+    flagship: true,
+    categories: ["payments", "genai"],
+    highlights: [
+      "NFC tap-to-pay with Twint and Stripe Connect, built inside Flutter",
+      "Passkey authentication shipped end to end",
+      "GenAI Butler assistant in four languages (DE/FR/IT/EN)",
+    ],
     links: [
       { label: "See Case Study", url: "/handman", internal: true },
       {
@@ -20,7 +29,6 @@ export const featuredProjects = [
       },
     ],
     tech: ["Flutter", "NFC", "Twint", "Stripe", "Passkeys", "GPT-4o"],
-    accent: "from-blue-500 to-purple-600",
     screens: [
       `${HANDMAN}/handman_jobs.webp`,
       `${HANDMAN}/handman_quotes.webp`,
@@ -32,18 +40,22 @@ export const featuredProjects = [
   },
   {
     title: "Wellness Accountability",
-    tagline: "Full-stack · Flutter + Strapi + Stripe",
+    tagline: "Wellness platform built end to end, mobile to backend",
     period: "Dec 2025",
-    description:
-      "Built end-to-end: Flutter mobile frontend with rich-text editor, Google authentication, user profiles, earnings dashboard, and content feed — backed by a Strapi backend with Stripe payments integration.",
+    role: "Full-stack build — Flutter + Strapi",
+    categories: ["fullstack", "payments"],
+    highlights: [
+      "Flutter app with rich-text editor, profiles, and content feed",
+      "Strapi backend with Stripe payments integration",
+      "Google authentication and an earnings dashboard",
+    ],
     links: [
       {
         label: "View Case Study",
-        url: "https://metavizai.com/case-study/wellness-accountability-app-a-complete-wellness-platform-by-metaviz-ai/",
+        url: "https://metavizai.com/case-study/fitness-wellness/wellness-and-accountability-app",
       },
     ],
     tech: ["Flutter", "Strapi", "Stripe", "Google Auth", "Rich Text"],
-    accent: "from-amber-500 to-orange-600",
     screens: [
       `${SCREENS}/wellness_splash_logo.webp`,
       `${SCREENS}/wellness_splash.webp`,
@@ -61,20 +73,23 @@ export const featuredProjects = [
   },
   {
     title: "Rawteen Dubai",
-    tagline: "WooCommerce grocery delivery + Stripe",
+    tagline: "Nutrition-focused grocery delivery for the Dubai market",
     period: "Nov 2025",
-    description:
-      "Built Stripe payment integration and shipped enhancements to a nutrition-focused grocery delivery app on a WooCommerce backend — product catalog, cart, order tracking, and a clean Dubai-market consumer experience.",
+    role: "Payments and feature development",
+    categories: ["ecommerce", "payments"],
+    highlights: [
+      "Stripe payment integration on a WooCommerce backend",
+      "Product catalog, cart, and order tracking",
+      "Clean consumer shopping experience end to end",
+    ],
     links: [
-      { label: "Visit Website", url: "https://rawteen.com/" },
-      { label: "Instagram", url: "https://www.instagram.com/raw.teen/" },
       {
-        label: "Case Study",
-        url: "https://metavizai.com/case-study/woocommerce-based-grocery-delivery-app-nutrition-focused-e-commerce-for-rawteen-dubai/",
+        label: "View Case Study",
+        url: "https://metavizai.com/case-study/e-commerce-retail/rawteen-app",
       },
+      { label: "Instagram", url: "https://www.instagram.com/raw.teen/" },
     ],
     tech: ["Flutter", "Stripe", "WooCommerce", "REST APIs"],
-    accent: "from-lime-500 to-green-600",
     screens: [
       `${SCREENS}/rawteen_splash2.webp`,
       `${SCREENS}/rawteen_splash.webp`,
@@ -90,16 +105,20 @@ export const featuredProjects = [
     title: "Snap n Shop",
     tagline: "Visual-discovery mobile commerce",
     period: "Oct 2025",
-    description:
-      "Built the Flutter mobile frontend and Stripe Checkout integration for a visual-discovery e-commerce app with Google OAuth, image-based product search, and Provider state management.",
+    role: "Flutter frontend and payments",
+    categories: ["ecommerce", "payments"],
+    highlights: [
+      "Image-based product search in a Flutter storefront",
+      "Stripe Checkout integration",
+      "Google OAuth with Provider state management",
+    ],
     links: [
       {
         label: "View Case Study",
-        url: "https://metavizai.com/case-study/snap-and-shop-transforming-mobile-commerce-through-visual-discovery/",
+        url: "https://metavizai.com/case-study/e-commerce-retail/snap-and-shop-online-store",
       },
     ],
     tech: ["Flutter", "Stripe", "Google OAuth", "Provider"],
-    accent: "from-pink-500 to-rose-600",
     screens: [
       `${SCREENS}/snapnshop_logo.webp`,
       `${SCREENS}/snapnshop_home.webp`,
@@ -115,16 +134,20 @@ export const featuredProjects = [
     title: "AI Apex",
     tagline: "GenAI personal fitness coach",
     period: "Sep 2025",
-    description:
-      "Built the full Flutter frontend for a GenAI fitness coaching app — personalized workout/meal plans, body-metrics tracking, dark/light theming, and an AI chatbot with conversation history.",
+    role: "Full Flutter frontend",
+    categories: ["genai"],
+    highlights: [
+      "Personalized GenAI workout and meal plans",
+      "Body-metrics tracking with dark/light theming",
+      "AI chatbot with conversation history",
+    ],
     links: [
       {
         label: "View Case Study",
-        url: "https://metavizai.com/case-study/ai-apex-personalized-fitness-nutrition-coaching-powered-by-generative-ai/",
+        url: "https://metavizai.com/case-study/sports-fitness/ai-apex-app",
       },
     ],
     tech: ["Flutter", "Generative AI", "GPT-4", "Provider", "Firebase"],
-    accent: "from-sky-500 to-blue-600",
     screens: [
       `${SCREENS}/aipex_splash.webp`,
       `${SCREENS}/aipex_onboarding.webp`,
@@ -144,6 +167,7 @@ export const olderProjects = [
   {
     title: "Digitalize Blood Bank",
     period: "2024",
+    categories: ["fullstack"],
     description:
       "Real-time blood donor app — live location matching, Firebase Auth, FCM notifications, secure in-app messaging. 6-month BIC internship.",
     image: `${IMG}/digitalizeblood.webp`,
@@ -153,6 +177,7 @@ export const olderProjects = [
   {
     title: "AI Chatbot",
     period: "2024",
+    categories: ["genai"],
     description:
       "Dialogflow-powered conversational AI integrated into Flutter — natural intent-based routing.",
     image: `${IMG}/chat_screen.webp`,
@@ -162,6 +187,7 @@ export const olderProjects = [
   {
     title: "QR Scanner",
     period: "2023",
+    categories: [],
     description:
       "Real-time QR scanner and generator. Published on Google Play with 100+ downloads.",
     image: `${IMG}/qr_scanner.webp`,
@@ -171,6 +197,7 @@ export const olderProjects = [
   {
     title: "Chrono Chase",
     period: "2023",
+    categories: [],
     description:
       "Unity endless runner with time-travel mechanics, shop, profiles, and powerups. Showcased at university.",
     image: `${IMG}/chrono_chase.webp`,

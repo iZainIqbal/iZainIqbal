@@ -34,6 +34,22 @@ code {
     monospace;
 }
 
+/* Scroll-reveal (see components/reveal.js) — animates only when motion is allowed */
+.reveal {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  .reveal-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* Hide horizontal scrollbars on snap carousels (keeps scrolling functional) */
 .scrollbar-hide {
   -ms-overflow-style: none; /* IE / old Edge */

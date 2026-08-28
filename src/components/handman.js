@@ -11,7 +11,11 @@ import {
   CheckCircle2,
   Code2,
   Star,
+  ExternalLink,
 } from "lucide-react";
+
+const OFFICIAL_CASE_STUDY_URL =
+  "https://metavizai.com/case-study/service-provider-marketplace/ai-field-service-saas-trades-crm-quotes-invoices-dispatch-ai-butler";
 
 const Handman = () => {
   const [expanded, setExpanded] = useState(false);
@@ -54,33 +58,39 @@ const Handman = () => {
     { value: "4", label: "Languages (DE/FR/IT/EN)" },
     { value: "iOS + Android", label: "Mobile platforms" },
     { value: "Twint + Stripe + NFC", label: "Payment rails" },
-    { value: "CHF 5.76M", label: "ARR target market" },
+    { value: "Offline-first", label: "Field app works without signal" },
   ];
 
   const promoCards = [
     {
-      src: `${publicUrl}/images/handman/handman_butler_car_lockout.webp`,
-      caption: "AI Butler — Job Detail",
-      desc: "Context-rich job details with location, media, and AI guidance in one surface.",
+      src: `${publicUrl}/images/handman/handman_promo_job_creation.webp`,
+      caption: "Job Creation",
+      desc: "Guided job posting with photos, location, and clear scope — in any of the four languages.",
     },
     {
-      src: `${publicUrl}/images/handman/handman_pro_assistant_quotes.webp`,
-      caption: "Pro Assistant — Quotes",
-      desc: "Recent quotes with one-tap open, follow-up actions, and faster turnaround.",
+      src: `${publicUrl}/images/handman/promo_quick_quotes.webp`,
+      caption: "Quick Quotes",
+      desc: "Craftsmen turn a job into a sendable quote in minutes, with Swiss VAT handled.",
     },
     {
-      src: `${publicUrl}/images/handman/handman_reviews.webp`,
-      caption: "Reviews & Trust Score",
-      desc: "Reputation signals that make the marketplace feel safe and predictable.",
+      src: `${publicUrl}/images/handman/promo_marketplace.webp`,
+      caption: "Map-First Marketplace",
+      desc: "Verified craftsmen near you, with trust scores and direct booking.",
     },
   ];
 
-  // Same three screens as the promo cards, framed as phone shots
-  const screenshots = promoCards.map(({ src, caption }) => ({ src, caption }));
+  const screenshots = [
+    { src: `${publicUrl}/images/handman/handman_jobs.webp`, caption: "Jobs Dashboard" },
+    { src: `${publicUrl}/images/handman/handman_quotes.webp`, caption: "Quotes" },
+    { src: `${publicUrl}/images/handman/handman_invoice.webp`, caption: "Invoicing" },
+    { src: `${publicUrl}/images/handman/handman_butler_car_lockout.webp`, caption: "AI Butler — Job Detail" },
+    { src: `${publicUrl}/images/handman/handman_pro_assistant_quotes.webp`, caption: "Pro Assistant — Quotes" },
+    { src: `${publicUrl}/images/handman/handman_reviews.webp`, caption: "Reviews & Trust Score" },
+  ];
 
   const aboutProject = [
     "Handman is Switzerland's first AI-native operating system for craftsmen — replacing the three software packages every Swiss tradesperson uses today (quoting & invoicing, scheduling, CRM) and folding them into the country's largest AI-powered craftsman marketplace.",
-    "Where legacy directories like Renovero and shut-down marketplaces like Buildigo stopped at lead generation, Handman owns the full workflow: search → quote → book → pay → track → dispute. Every module is API-first so external AI agents (Apple Intelligence, Gemini, ChatGPT, insurance chatbots) can deterministically book a craftsman by 2029 via the Annex B 'Preferred Partner' surface.",
+    "Where legacy directories like Renovero and shut-down marketplaces like Buildigo stopped at lead generation, Handman owns the full workflow: search → quote → book → pay → track. Every module is API-first, built so external AI assistants can eventually book a craftsman directly.",
     "Built at Metaviz AI as a four-language platform (DE / FR / IT / EN) across iOS, Android, and web, with a GenAI Butler embedded on every screen instead of behind a chat icon.",
   ];
 
@@ -98,11 +108,11 @@ const Handman = () => {
   ];
 
   const outcomes = [
-    "Net savings of CHF 1,700–3,900/year per craftsman versus the legacy Bexio + scheduler + Treuhänder stack.",
-    "Three software packages replaced per craftsman (quotes & invoicing, scheduling, CRM).",
+    "Replaces the three software packages every Swiss tradesperson runs today — quoting & invoicing, scheduling, CRM — with one app.",
+    "Swiss QR-Rechnung invoicing with VAT handled automatically on every transaction.",
     "Four-language coverage from day one — DE / FR / IT / EN — versus competitors shipping German-only.",
-    "Annex B API surface ready to plug into Apple Intelligence, Gemini, and ChatGPT by 2029.",
-    "6,000 paying businesses targeted in Year 1 out of a ~96,000-profile scrapeable craftsman corpus.",
+    "Offline-first field app: job sheets, photos, and signatures keep working without connectivity.",
+    "API-first modules designed so external AI assistants can book a craftsman directly.",
   ];
 
   return (
@@ -136,6 +146,15 @@ const Handman = () => {
             the GenAI Butler into a four-language Swiss product. Built at
             Metaviz AI.
           </p>
+          <a
+            href={OFFICIAL_CASE_STUDY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-blue-400 hover:text-blue-300 text-sm font-medium mt-4 transition-colors"
+          >
+            <span>Read the official Metaviz AI case study</span>
+            <ExternalLink className="w-3.5 h-3.5" />
+          </a>
         </div>
 
         {/* MY ROLE — front and center */}
@@ -205,7 +224,7 @@ const Handman = () => {
                 key={i}
                 className="bg-gray-800/40 rounded-2xl border border-gray-700 overflow-hidden hover:border-blue-500/50 transition-all duration-300 group"
               >
-                <div className="aspect-[9/16] bg-[#1f3d4a] overflow-hidden">
+                <div className="aspect-[1/2] bg-[#1f3d4a] overflow-hidden">
                   <img
                     src={p.src}
                     alt={p.caption}
@@ -230,10 +249,11 @@ const Handman = () => {
             App Screens
           </h3>
           <p className="text-gray-400 text-sm text-center mb-8">
-            Real screens from the Handman mobile app — AI Butler, Pro
-            Assistant, and the Reviews / Trust Score surface.
+            Real screens from the Handman mobile app — jobs, quotes,
+            invoicing, the AI Butler, Pro Assistant, and Reviews / Trust
+            Score.
           </p>
-          <div className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory justify-center md:justify-center scrollbar-hide">
+          <div className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
             {screenshots.map((s, i) => (
               <div key={i} className="snap-start flex-shrink-0 w-[200px] md:w-[220px]">
                 <div className="relative aspect-[9/19] bg-gray-900 rounded-[2rem] border-[6px] border-gray-800 shadow-2xl overflow-hidden">

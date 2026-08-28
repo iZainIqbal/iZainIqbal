@@ -55,15 +55,7 @@ const About = ({ compact = false }) => {
     Education: [
       {
         name: "BS Computer Science — University of Gujrat",
-        desc: "2021 – 2025 · CGPA 3.37 / 4.00",
-      },
-      {
-        name: "Intermediate (Pre-Engineering)",
-        desc: "Completed 2019 with focus on Pre-Engineering",
-      },
-      {
-        name: "Matriculation (Science)",
-        desc: "Secured 978 / 1100 in science group",
+        desc: "2021 – 2025",
       },
     ],
   };
@@ -114,10 +106,9 @@ const About = ({ compact = false }) => {
                 I'm a Flutter and full-stack developer based in Pakistan,
                 building cross-platform mobile and web products for startups in
                 Switzerland, US, UAE, and beyond. Computer Science graduate from
-                University of Gujrat (CGPA 3.37) with 10+ IBM Coursera
-                certifications across Cloud, DevOps, Python, and Unity. Earlier I
-                served as a Junior Developer at Digitalize Blood Bank during a
-                6-month internship.
+                University of Gujrat with IBM Coursera certifications across
+                Cloud, DevOps, Python, and Unity. Earlier I served as a Junior
+                Developer at Digitalize Blood Bank during a 6-month internship.
               </p>
             )}
 
@@ -175,6 +166,14 @@ const About = ({ compact = false }) => {
                   </div>
                 ))}
               </div>
+
+              <Link
+                to="/certificates"
+                className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors"
+              >
+                <span>View my IBM certifications</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
             )}
           </div>

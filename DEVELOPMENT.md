@@ -26,9 +26,9 @@ Visit the live portfolio: **[https://izainiqbal.github.io/iZainIqbal/](https://i
 
 ## 🛠️ Tech Stack
 
-- **Frontend Framework**: React 18.2.0
+- **Frontend Framework**: React 18.3.1
 - **Routing**: React Router DOM 7
-- **Styling**: Tailwind CSS 3.4.1
+- **Styling**: Tailwind CSS 3.4.17
 - **Icons**: Lucide React
 - **Email Service**: EmailJS
 - **Build Tool**: Create React App
@@ -98,7 +98,7 @@ npm run deploy
 - Update personal information in component files
 - Replace images in `/public/images/`
 - Modify colors and styling in Tailwind config
-- Update project data in `src/components/projects.js`
+- Update project data in `src/data/projects.js` (the view lives in `src/components/projects.js`)
 - Customize certificates in `src/components/certificates.js`
 
 ## 📄 License

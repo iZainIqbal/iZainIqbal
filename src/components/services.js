@@ -9,6 +9,7 @@ import {
   ShieldCheck,
   ArrowRight,
 } from "lucide-react";
+import Reveal from "./reveal";
 
 const Services = ({ limit, showSeeAll = false }) => {
   const services = [
@@ -135,9 +136,9 @@ const Services = ({ limit, showSeeAll = false }) => {
           {(limit ? services.slice(0, limit) : services).map((service, index) => {
             const Icon = service.icon;
             return (
+              <Reveal key={index} delay={(index % 3) * 75} className="h-full">
               <div
-                key={index}
-                className={`group relative bg-gray-800/60 backdrop-blur-sm p-6 rounded-2xl border border-gray-700 ${service.border} transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl overflow-hidden`}
+                className={`group relative h-full bg-gray-800/60 backdrop-blur-sm p-6 rounded-2xl border border-gray-700 ${service.border} transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl overflow-hidden`}
               >
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`}
@@ -184,6 +185,7 @@ const Services = ({ limit, showSeeAll = false }) => {
                   </Link>
                 </div>
               </div>
+              </Reveal>
             );
           })}
         </div>
